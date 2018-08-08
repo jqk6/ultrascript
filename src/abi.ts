@@ -399,6 +399,8 @@ export class Abi {
       body.push(`    let ${contractVarName} = new ${contractName}(receiver);`);
       body.push(`    let ds = ${contractVarName}.getDataStream();`);
       body.push(`    let action = new NameEx(actH, actL);`);
+      body.push(`    ${contractVarName}.onInit();`);
+
 
       for (let instance of clzPrototype.instanceMembers.values()) {
         if (this.isActionFuncPrototype(instance)) {
@@ -452,6 +454,8 @@ export class Abi {
           }
           body.push(`      ${contractVarName}.${funcName}(${fields.join(',')});`);
           body.push("    }");
+          body.push(`    ${contractVarName}.onStop();`);
+
         }
       }
       body.push("  }");
