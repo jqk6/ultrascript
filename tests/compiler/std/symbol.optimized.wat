@@ -1,14 +1,13 @@
 (module
  (type $ii (func (param i32) (result i32)))
- (type $iiiiv (func (param i32 i32 i32 i32)))
+ (type $v (func))
  (type $iv (func (param i32)))
  (type $iiii (func (param i32 i32 i32) (result i32)))
  (type $iiiv (func (param i32 i32 i32)))
  (type $iii (func (param i32 i32) (result i32)))
  (type $iiiiii (func (param i32 i32 i32 i32 i32) (result i32)))
  (type $iiv (func (param i32 i32)))
- (type $v (func))
- (import "env" "abort" (func $~lib/env/abort (param i32 i32 i32 i32)))
+ (import "env" "abort" (func $~lib/env/abort))
  (global $~lib/allocator/arena/startOffset (mut i32) (i32.const 0))
  (global $~lib/allocator/arena/offset (mut i32) (i32.const 0))
  (global $~lib/symbol/nextId (mut i32) (i32.const 12))
@@ -158,12 +157,7 @@
     (i32.const 1073741816)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 104)
-     (i32.const 23)
-     (i32.const 2)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -517,12 +511,7 @@
     (i32.const 1073741816)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 56)
-     (i32.const 13)
-     (i32.const 40)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -549,7 +538,7 @@
   )
   (get_local $3)
  )
- (func $~lib/map/Map<String,usize>#clear (; 8 ;) (; has Stack IR ;) (type $iv) (param $0 i32)
+ (func $~lib/map/Map<String_usize>#clear (; 8 ;) (; has Stack IR ;) (type $iv) (param $0 i32)
   (i32.store
    (get_local $0)
    (call $~lib/arraybuffer/ArrayBuffer#constructor
@@ -583,7 +572,7 @@
    (i32.const 0)
   )
  )
- (func $~lib/map/Map<String,usize>#constructor (; 9 ;) (; has Stack IR ;) (type $ii) (param $0 i32) (result i32)
+ (func $~lib/map/Map<String_usize>#constructor (; 9 ;) (; has Stack IR ;) (type $ii) (param $0 i32) (result i32)
   (if
    (i32.eqz
     (get_local $0)
@@ -619,7 +608,7 @@
     )
    )
   )
-  (call $~lib/map/Map<String,usize>#clear
+  (call $~lib/map/Map<String_usize>#clear
    (get_local $0)
   )
   (get_local $0)
@@ -793,7 +782,7 @@
    )
   )
  )
- (func $~lib/map/Map<String,usize>#find (; 13 ;) (; has Stack IR ;) (type $iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+ (func $~lib/map/Map<String_usize>#find (; 13 ;) (; has Stack IR ;) (type $iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (set_local $2
    (i32.load offset=8
     (i32.add
@@ -856,9 +845,9 @@
   )
   (i32.const 0)
  )
- (func $~lib/map/Map<String,usize>#has (; 14 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/map/Map<String_usize>#has (; 14 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (i32.ne
-   (call $~lib/map/Map<String,usize>#find
+   (call $~lib/map/Map<String_usize>#find
     (get_local $0)
     (get_local $1)
     (call $~lib/internal/hash/hashStr
@@ -868,11 +857,11 @@
    (i32.const 0)
   )
  )
- (func $~lib/map/Map<String,usize>#get (; 15 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/map/Map<String_usize>#get (; 15 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (tee_local $0
    (if (result i32)
     (tee_local $0
-     (call $~lib/map/Map<String,usize>#find
+     (call $~lib/map/Map<String_usize>#find
       (get_local $0)
       (get_local $1)
       (call $~lib/internal/hash/hashStr
@@ -887,7 +876,7 @@
    )
   )
  )
- (func $~lib/map/Map<String,usize>#rehash (; 16 ;) (; has Stack IR ;) (type $iiv) (param $0 i32) (param $1 i32)
+ (func $~lib/map/Map<String_usize>#rehash (; 16 ;) (; has Stack IR ;) (type $iiv) (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   (local $4 i32)
@@ -1050,13 +1039,13 @@
    )
   )
  )
- (func $~lib/map/Map<String,usize>#set (; 17 ;) (; has Stack IR ;) (type $iiiv) (param $0 i32) (param $1 i32) (param $2 i32)
+ (func $~lib/map/Map<String_usize>#set (; 17 ;) (; has Stack IR ;) (type $iiiv) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
   (local $4 i32)
   (local $5 i32)
   (if
    (tee_local $3
-    (call $~lib/map/Map<String,usize>#find
+    (call $~lib/map/Map<String_usize>#find
      (get_local $0)
      (get_local $1)
      (tee_local $5
@@ -1080,7 +1069,7 @@
        (get_local $0)
       )
      )
-     (call $~lib/map/Map<String,usize>#rehash
+     (call $~lib/map/Map<String_usize>#rehash
       (get_local $0)
       (tee_local $3
        (if (result i32)
@@ -1232,7 +1221,7 @@
    (i32.const 16777619)
   )
  )
- (func $~lib/map/Map<usize,String>#find (; 19 ;) (; has Stack IR ;) (type $iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
+ (func $~lib/map/Map<usize_String>#find (; 19 ;) (; has Stack IR ;) (type $iiii) (param $0 i32) (param $1 i32) (param $2 i32) (result i32)
   (set_local $2
    (i32.load offset=8
     (i32.add
@@ -1295,7 +1284,7 @@
   )
   (i32.const 0)
  )
- (func $~lib/map/Map<usize,String>#rehash (; 20 ;) (; has Stack IR ;) (type $iiv) (param $0 i32) (param $1 i32)
+ (func $~lib/map/Map<usize_String>#rehash (; 20 ;) (; has Stack IR ;) (type $iiv) (param $0 i32) (param $1 i32)
   (local $2 i32)
   (local $3 i32)
   (local $4 i32)
@@ -1458,13 +1447,13 @@
    )
   )
  )
- (func $~lib/map/Map<usize,String>#set (; 21 ;) (; has Stack IR ;) (type $iiiv) (param $0 i32) (param $1 i32) (param $2 i32)
+ (func $~lib/map/Map<usize_String>#set (; 21 ;) (; has Stack IR ;) (type $iiiv) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
   (local $4 i32)
   (local $5 i32)
   (if
    (tee_local $3
-    (call $~lib/map/Map<usize,String>#find
+    (call $~lib/map/Map<usize_String>#find
      (get_local $0)
      (get_local $1)
      (tee_local $5
@@ -1488,7 +1477,7 @@
        (get_local $0)
       )
      )
-     (call $~lib/map/Map<usize,String>#rehash
+     (call $~lib/map/Map<usize_String>#rehash
       (get_local $0)
       (tee_local $3
        (if (result i32)
@@ -1600,12 +1589,12 @@
   (if
    (get_global $~lib/symbol/stringToId)
    (if
-    (call $~lib/map/Map<String,usize>#has
+    (call $~lib/map/Map<String_usize>#has
      (get_global $~lib/symbol/stringToId)
      (get_local $0)
     )
     (return
-     (call $~lib/map/Map<String,usize>#get
+     (call $~lib/map/Map<String_usize>#get
       (get_global $~lib/symbol/stringToId)
       (get_local $0)
      )
@@ -1613,12 +1602,12 @@
    )
    (block
     (set_global $~lib/symbol/stringToId
-     (call $~lib/map/Map<String,usize>#constructor
+     (call $~lib/map/Map<String_usize>#constructor
       (i32.const 0)
      )
     )
     (set_global $~lib/symbol/idToString
-     (call $~lib/map/Map<String,usize>#constructor
+     (call $~lib/map/Map<String_usize>#constructor
       (i32.const 0)
      )
     )
@@ -1638,21 +1627,21 @@
    )
    (unreachable)
   )
-  (call $~lib/map/Map<String,usize>#set
+  (call $~lib/map/Map<String_usize>#set
    (get_global $~lib/symbol/stringToId)
    (get_local $0)
    (get_local $1)
   )
-  (call $~lib/map/Map<usize,String>#set
+  (call $~lib/map/Map<usize_String>#set
    (get_global $~lib/symbol/idToString)
    (get_local $1)
    (get_local $0)
   )
   (get_local $1)
  )
- (func $~lib/map/Map<usize,String>#has (; 23 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/map/Map<usize_String>#has (; 23 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (i32.ne
-   (call $~lib/map/Map<usize,String>#find
+   (call $~lib/map/Map<usize_String>#find
     (get_local $0)
     (get_local $1)
     (call $~lib/internal/hash/hash32
@@ -1662,11 +1651,11 @@
    (i32.const 0)
   )
  )
- (func $~lib/map/Map<usize,String>#get (; 24 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/map/Map<usize_String>#get (; 24 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (tee_local $0
    (if (result i32)
     (tee_local $0
-     (call $~lib/map/Map<usize,String>#find
+     (call $~lib/map/Map<usize_String>#find
       (get_local $0)
       (get_local $1)
       (call $~lib/internal/hash/hash32
@@ -1691,7 +1680,7 @@
     )
    )
    (set_local $1
-    (call $~lib/map/Map<usize,String>#has
+    (call $~lib/map/Map<usize_String>#has
      (get_global $~lib/symbol/idToString)
      (get_local $0)
     )
@@ -1700,7 +1689,7 @@
   (tee_local $0
    (if (result i32)
     (get_local $1)
-    (call $~lib/map/Map<usize,String>#get
+    (call $~lib/map/Map<usize_String>#get
      (get_global $~lib/symbol/idToString)
      (get_local $0)
     )
@@ -1709,139 +1698,96 @@
   )
  )
  (func $start (; 26 ;) (; has Stack IR ;) (type $v)
-  (set_global $~lib/allocator/arena/startOffset
-   (i32.const 168)
-  )
-  (set_global $~lib/allocator/arena/offset
-   (get_global $~lib/allocator/arena/startOffset)
-  )
-  (set_global $std/symbol/sym1
-   (call $~lib/symbol/Symbol
-    (i32.const 8)
+  (block $folding-inner0
+   (set_global $~lib/allocator/arena/startOffset
+    (i32.const 168)
    )
-  )
-  (set_global $std/symbol/sym2
-   (call $~lib/symbol/Symbol
-    (i32.const 8)
+   (set_global $~lib/allocator/arena/offset
+    (get_global $~lib/allocator/arena/startOffset)
    )
-  )
-  (if
-   (i32.eq
-    (get_global $std/symbol/sym1)
-    (get_global $std/symbol/sym2)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 24)
-     (i32.const 6)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $std/symbol/sym3
-   (call $~lib/symbol/Symbol.for
-    (i32.const 8)
-   )
-  )
-  (set_global $std/symbol/sym4
-   (call $~lib/symbol/Symbol.for
-    (i32.const 8)
-   )
-  )
-  (if
-   (i32.ne
-    (get_global $std/symbol/sym3)
-    (get_global $std/symbol/sym4)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 24)
-     (i32.const 11)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $std/symbol/key1
-   (call $~lib/symbol/Symbol.keyFor
-    (get_global $std/symbol/sym1)
-   )
-  )
-  (set_global $std/symbol/key2
-   (call $~lib/symbol/Symbol.keyFor
-    (get_global $std/symbol/sym2)
-   )
-  )
-  (if
-   (get_global $std/symbol/key1)
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 24)
-     (i32.const 16)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (get_global $std/symbol/key2)
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 24)
-     (i32.const 17)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $std/symbol/key3
-   (call $~lib/symbol/Symbol.keyFor
-    (get_global $std/symbol/sym3)
-   )
-  )
-  (set_global $std/symbol/key4
-   (call $~lib/symbol/Symbol.keyFor
-    (get_global $std/symbol/sym4)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (get_global $std/symbol/key3)
+   (set_global $std/symbol/sym1
+    (call $~lib/symbol/Symbol
      (i32.const 8)
     )
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 24)
-     (i32.const 22)
-     (i32.const 0)
+   (set_global $std/symbol/sym2
+    (call $~lib/symbol/Symbol
+     (i32.const 8)
     )
-    (unreachable)
    )
+   (if
+    (i32.eq
+     (get_global $std/symbol/sym1)
+     (get_global $std/symbol/sym2)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $std/symbol/sym3
+    (call $~lib/symbol/Symbol.for
+     (i32.const 8)
+    )
+   )
+   (set_global $std/symbol/sym4
+    (call $~lib/symbol/Symbol.for
+     (i32.const 8)
+    )
+   )
+   (if
+    (i32.ne
+     (get_global $std/symbol/sym3)
+     (get_global $std/symbol/sym4)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $std/symbol/key1
+    (call $~lib/symbol/Symbol.keyFor
+     (get_global $std/symbol/sym1)
+    )
+   )
+   (set_global $std/symbol/key2
+    (call $~lib/symbol/Symbol.keyFor
+     (get_global $std/symbol/sym2)
+    )
+   )
+   (if
+    (get_global $std/symbol/key1)
+    (br $folding-inner0)
+   )
+   (if
+    (get_global $std/symbol/key2)
+    (br $folding-inner0)
+   )
+   (set_global $std/symbol/key3
+    (call $~lib/symbol/Symbol.keyFor
+     (get_global $std/symbol/sym3)
+    )
+   )
+   (set_global $std/symbol/key4
+    (call $~lib/symbol/Symbol.keyFor
+     (get_global $std/symbol/sym4)
+    )
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (get_global $std/symbol/key3)
+      (i32.const 8)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (get_global $std/symbol/key3)
+      (get_global $std/symbol/key4)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (return)
   )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (get_global $std/symbol/key3)
-     (get_global $std/symbol/key4)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 24)
-     (i32.const 23)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
+  (call $~lib/env/abort)
+  (unreachable)
  )
 )

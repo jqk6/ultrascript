@@ -5,9 +5,8 @@
  (type $v (func))
  (type $iii (func (param i32 i32) (result i32)))
  (type $iiiv (func (param i32 i32 i32)))
- (type $iiiiv (func (param i32 i32 i32 i32)))
  (type $i (func (result i32)))
- (import "env" "abort" (func $~lib/env/abort (param i32 i32 i32 i32)))
+ (import "env" "abort" (func $~lib/env/abort))
  (global $~lib/internal/allocator/AL_BITS i32 (i32.const 3))
  (global $~lib/internal/allocator/AL_SIZE i32 (i32.const 8))
  (global $~lib/internal/allocator/AL_MASK i32 (i32.const 7))
@@ -1100,12 +1099,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 120)
-     (i32.const 23)
-     (i32.const 2)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -3268,12 +3262,7 @@
       )
      )
      (block
-      (call $~lib/env/abort
-       (i32.const 0)
-       (i32.const 120)
-       (i32.const 37)
-       (i32.const 4)
-      )
+      (call $~lib/env/abort)
       (unreachable)
      )
     )
@@ -3388,12 +3377,7 @@
        )
       )
       (block
-       (call $~lib/env/abort
-        (i32.const 0)
-        (i32.const 120)
-        (i32.const 61)
-        (i32.const 4)
-       )
+       (call $~lib/env/abort)
        (unreachable)
       )
      )
@@ -3475,12 +3459,7 @@
       (i32.const 268435454)
      )
      (block
-      (call $~lib/env/abort
-       (i32.const 0)
-       (i32.const 72)
-       (i32.const 87)
-       (i32.const 41)
-      )
+      (call $~lib/env/abort)
       (unreachable)
      )
     )
@@ -3509,7 +3488,7 @@
     )
    )
   )
-  (block $~lib/internal/arraybuffer/storeUnsafe<Foo,Foo>|inlined.0
+  (block $~lib/internal/arraybuffer/storeUnsafe<Foo_Foo>|inlined.0
    (i32.store offset=8
     (i32.add
      (get_local $3)

@@ -5,9 +5,8 @@
  (type $v (func))
  (type $iii (func (param i32 i32) (result i32)))
  (type $iiiv (func (param i32 i32 i32)))
- (type $iiiiv (func (param i32 i32 i32 i32)))
  (type $i (func (result i32)))
- (import "env" "abort" (func $~lib/env/abort (param i32 i32 i32 i32)))
+ (import "env" "abort" (func $~lib/env/abort))
  (global $~lib/allocator/arena/startOffset (mut i32) (i32.const 0))
  (global $~lib/allocator/arena/offset (mut i32) (i32.const 0))
  (global $~lib/collector/itcm/state (mut i32) (i32.const 0))
@@ -914,12 +913,7 @@
     (i32.const 1073741816)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 120)
-     (i32.const 23)
-     (i32.const 2)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -2633,12 +2627,7 @@
       (i32.const 1073741816)
      )
      (block
-      (call $~lib/env/abort
-       (i32.const 0)
-       (i32.const 120)
-       (i32.const 37)
-       (i32.const 4)
-      )
+      (call $~lib/env/abort)
       (unreachable)
      )
     )
@@ -2720,12 +2709,7 @@
        (i32.const 0)
       )
       (block
-       (call $~lib/env/abort
-        (i32.const 0)
-        (i32.const 120)
-        (i32.const 61)
-        (i32.const 4)
-       )
+       (call $~lib/env/abort)
        (unreachable)
       )
      )
@@ -2799,12 +2783,7 @@
       (i32.const 268435454)
      )
      (block
-      (call $~lib/env/abort
-       (i32.const 0)
-       (i32.const 72)
-       (i32.const 87)
-       (i32.const 41)
-      )
+      (call $~lib/env/abort)
       (unreachable)
      )
     )

@@ -1,11 +1,10 @@
 (module
  (type $ii (func (param i32) (result i32)))
  (type $iv (func (param i32)))
- (type $iiiiv (func (param i32 i32 i32 i32)))
+ (type $v (func))
  (type $iii (func (param i32 i32) (result i32)))
  (type $iiiiii (func (param i32 i32 i32 i32 i32) (result i32)))
- (type $v (func))
- (import "env" "abort" (func $~lib/env/abort (param i32 i32 i32 i32)))
+ (import "env" "abort" (func $~lib/env/abort))
  (global $~lib/internal/allocator/AL_BITS i32 (i32.const 3))
  (global $~lib/internal/allocator/AL_SIZE i32 (i32.const 8))
  (global $~lib/internal/allocator/AL_MASK i32 (i32.const 7))
@@ -276,12 +275,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 40)
-     (i32.const 9)
-     (i32.const 2)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -295,12 +289,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 40)
-     (i32.const 10)
-     (i32.const 2)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -316,12 +305,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 40)
-     (i32.const 26)
-     (i32.const 2)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -337,12 +321,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 40)
-     (i32.const 21)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )

@@ -79,10 +79,6 @@ export class Map<K,V> {
     return null;
   }
 
-  keys():K[]{
-    return this.__keys;
-  }
-
   has(key: K): bool {
     return this.find(key, hash<K>(key)) !== null;
   }
@@ -90,6 +86,20 @@ export class Map<K,V> {
   get(key: K): V {
     var entry = this.find(key, hash<K>(key));
     return entry ? entry.value : <V>unreachable();
+  }
+  
+  keys(): K[]{
+    let _keys = new Array<K>();
+    var startPtr = changetype<usize>(this.entries) + HEADER_SIZE_AB;
+    var endPtr = startPtr + <usize>this.entriesOffset * ENTRY_SIZE<K,V>();
+    while (startPtr != endPtr) {
+      let oldEntry = changetype<MapEntry<K,V>>(startPtr);
+      if (!(oldEntry.taggedNext & EMPTY)) {
+        _keys.push(oldEntry.key);
+      }
+      startPtr += ENTRY_SIZE<K,V>();
+    }
+    return _keys;
   }
 
   set(key: K, value: V): void {

@@ -1,5 +1,5 @@
 (module
- (type $iiiiv (func (param i32 i32 i32 i32)))
+ (type $v (func))
  (type $iv (func (param i32)))
  (type $iii (func (param i32 i32) (result i32)))
  (type $ii (func (param i32) (result i32)))
@@ -7,9 +7,9 @@
  (type $iiii (func (param i32 i32 i32) (result i32)))
  (type $iiFv (func (param i32 i32 f64)))
  (type $FFi (func (param f64 f64) (result i32)))
+ (type $iiiiv (func (param i32 i32 i32 i32)))
  (type $iiF (func (param i32 i32) (result f64)))
- (type $v (func))
- (import "env" "abort" (func $~lib/env/abort (param i32 i32 i32 i32)))
+ (import "env" "abort" (func $~lib/env/abort))
  (global $~lib/allocator/arena/startOffset (mut i32) (i32.const 0))
  (global $~lib/allocator/arena/offset (mut i32) (i32.const 0))
  (global $std/typedarray/arr (mut i32) (i32.const 0))
@@ -17,7 +17,7 @@
  (global $~argc (mut i32) (i32.const 0))
  (global $std/typedarray/clampedArr (mut i32) (i32.const 0))
  (table 1 1 anyfunc)
- (elem (i32.const 0) $~lib/internal/typedarray/TypedArray<f64,f64>#sort|trampoline~anonymous|0)
+ (elem (i32.const 0) $~lib/internal/typedarray/TypedArray<f64_f64>#sort|trampoline~anonymous|0)
  (memory $0 1)
  (data (i32.const 8) "\11\00\00\00s\00t\00d\00/\00t\00y\00p\00e\00d\00a\00r\00r\00a\00y\00.\00t\00s")
  (data (i32.const 48) "\1b\00\00\00~\00l\00i\00b\00/\00i\00n\00t\00e\00r\00n\00a\00l\00/\00t\00y\00p\00e\00d\00a\00r\00r\00a\00y\00.\00t\00s")
@@ -132,12 +132,7 @@
     (i32.const 1073741816)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 112)
-     (i32.const 23)
-     (i32.const 2)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -488,7 +483,7 @@
    (get_local $0)
   )
  )
- (func $~lib/internal/typedarray/TypedArray<i8,i32>#constructor (; 6 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/internal/typedarray/TypedArray<i8_i32>#constructor (; 6 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (if
    (i32.gt_u
@@ -496,12 +491,7 @@
     (i32.const 1073741816)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 24)
-     (i32.const 34)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -554,7 +544,7 @@
   )
   (get_local $0)
  )
- (func $~lib/internal/typedarray/TypedArray<i16,i32>#constructor (; 7 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/internal/typedarray/TypedArray<i16_i32>#constructor (; 7 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (if
    (i32.gt_u
@@ -562,12 +552,7 @@
     (i32.const 536870908)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 24)
-     (i32.const 34)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -625,7 +610,7 @@
   )
   (get_local $0)
  )
- (func $~lib/internal/typedarray/TypedArray<i32,i32>#constructor (; 8 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/internal/typedarray/TypedArray<i32_i32>#constructor (; 8 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (if
    (i32.gt_u
@@ -633,12 +618,7 @@
     (i32.const 268435454)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 24)
-     (i32.const 34)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -696,7 +676,7 @@
   )
   (get_local $0)
  )
- (func $~lib/internal/typedarray/TypedArray<i64,i64>#constructor (; 9 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/internal/typedarray/TypedArray<i64_i64>#constructor (; 9 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (if
    (i32.gt_u
@@ -704,12 +684,7 @@
     (i32.const 134217727)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 24)
-     (i32.const 34)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -769,694 +744,435 @@
  )
  (func $std/typedarray/testInstantiate (; 10 ;) (; has Stack IR ;) (type $iv) (param $0 i32)
   (local $1 i32)
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i8,i32>#constructor
-      (i32.const 0)
-      (get_local $0)
+  (block $folding-inner0
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i8_i32>#constructor
+       (i32.const 0)
+       (get_local $0)
+      )
      )
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 18)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (get_local $0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 19)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.sub
+   (if
+    (i32.ne
      (i32.load offset=8
       (get_local $1)
      )
-     (i32.load offset=4
-      (get_local $1)
+     (get_local $0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (i32.sub
+      (i32.load offset=8
+       (get_local $1)
+      )
+      (i32.load offset=4
+       (get_local $1)
+      )
+     )
+     (get_local $0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i8_i32>#constructor
+       (i32.const 0)
+       (get_local $0)
+      )
      )
     )
-    (get_local $0)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 20)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i8,i32>#constructor
-      (i32.const 0)
-      (get_local $0)
-     )
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 23)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (get_local $0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 24)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.sub
+   (if
+    (i32.ne
      (i32.load offset=8
       (get_local $1)
      )
-     (i32.load offset=4
-      (get_local $1)
+     (get_local $0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (i32.sub
+      (i32.load offset=8
+       (get_local $1)
+      )
+      (i32.load offset=4
+       (get_local $1)
+      )
+     )
+     (get_local $0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i8_i32>#constructor
+       (i32.const 0)
+       (get_local $0)
+      )
      )
     )
-    (get_local $0)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 25)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i8,i32>#constructor
-      (i32.const 0)
-      (get_local $0)
-     )
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 28)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (get_local $0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 29)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.sub
+   (if
+    (i32.ne
      (i32.load offset=8
       (get_local $1)
      )
-     (i32.load offset=4
+     (get_local $0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (i32.sub
+      (i32.load offset=8
+       (get_local $1)
+      )
+      (i32.load offset=4
+       (get_local $1)
+      )
+     )
+     (get_local $0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i16_i32>#constructor
+       (i32.const 0)
+       (get_local $0)
+      )
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (i32.load offset=8
       (get_local $1)
      )
-    )
-    (get_local $0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 30)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i16,i32>#constructor
-      (i32.const 0)
+     (i32.shl
       (get_local $0)
+      (i32.const 1)
      )
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 33)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (i32.shl
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (get_local $1)
+       )
+       (i32.load offset=4
+        (get_local $1)
+       )
+      )
+      (i32.const 1)
+     )
      (get_local $0)
-     (i32.const 1)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 34)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (get_local $1)
-      )
-      (i32.load offset=4
-       (get_local $1)
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i16_i32>#constructor
+       (i32.const 0)
+       (get_local $0)
       )
      )
-     (i32.const 1)
     )
-    (get_local $0)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 35)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i16,i32>#constructor
-      (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load offset=8
+      (get_local $1)
+     )
+     (i32.shl
       (get_local $0)
+      (i32.const 1)
      )
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 38)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (i32.shl
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (get_local $1)
+       )
+       (i32.load offset=4
+        (get_local $1)
+       )
+      )
+      (i32.const 1)
+     )
      (get_local $0)
-     (i32.const 1)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 39)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (get_local $1)
-      )
-      (i32.load offset=4
-       (get_local $1)
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i32_i32>#constructor
+       (i32.const 0)
+       (get_local $0)
       )
      )
-     (i32.const 1)
     )
-    (get_local $0)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 40)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i32,i32>#constructor
-      (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load offset=8
+      (get_local $1)
+     )
+     (i32.shl
       (get_local $0)
+      (i32.const 2)
      )
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 43)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (i32.shl
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (get_local $1)
+       )
+       (i32.load offset=4
+        (get_local $1)
+       )
+      )
+      (i32.const 2)
+     )
      (get_local $0)
-     (i32.const 2)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 44)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (get_local $1)
-      )
-      (i32.load offset=4
-       (get_local $1)
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i32_i32>#constructor
+       (i32.const 0)
+       (get_local $0)
       )
      )
-     (i32.const 2)
     )
-    (get_local $0)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 45)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i32,i32>#constructor
-      (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load offset=8
+      (get_local $1)
+     )
+     (i32.shl
       (get_local $0)
+      (i32.const 2)
      )
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 48)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (i32.shl
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (get_local $1)
+       )
+       (i32.load offset=4
+        (get_local $1)
+       )
+      )
+      (i32.const 2)
+     )
      (get_local $0)
-     (i32.const 2)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 49)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (get_local $1)
-      )
-      (i32.load offset=4
-       (get_local $1)
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i64_i64>#constructor
+       (i32.const 0)
+       (get_local $0)
       )
      )
-     (i32.const 2)
     )
-    (get_local $0)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 50)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i64,i64>#constructor
-      (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load offset=8
+      (get_local $1)
+     )
+     (i32.shl
       (get_local $0)
+      (i32.const 3)
      )
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 53)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (i32.shl
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (get_local $1)
+       )
+       (i32.load offset=4
+        (get_local $1)
+       )
+      )
+      (i32.const 3)
+     )
      (get_local $0)
-     (i32.const 3)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 54)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (get_local $1)
-      )
-      (i32.load offset=4
-       (get_local $1)
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i64_i64>#constructor
+       (i32.const 0)
+       (get_local $0)
       )
      )
-     (i32.const 3)
     )
-    (get_local $0)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 55)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i64,i64>#constructor
-      (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load offset=8
+      (get_local $1)
+     )
+     (i32.shl
       (get_local $0)
+      (i32.const 3)
      )
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 58)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (i32.shl
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (get_local $1)
+       )
+       (i32.load offset=4
+        (get_local $1)
+       )
+      )
+      (i32.const 3)
+     )
      (get_local $0)
-     (i32.const 3)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 59)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (get_local $1)
-      )
-      (i32.load offset=4
-       (get_local $1)
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i32_i32>#constructor
+       (i32.const 0)
+       (get_local $0)
       )
      )
-     (i32.const 3)
     )
-    (get_local $0)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 60)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i32,i32>#constructor
-      (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load offset=8
+      (get_local $1)
+     )
+     (i32.shl
       (get_local $0)
+      (i32.const 2)
      )
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 63)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (i32.shl
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (get_local $1)
+       )
+       (i32.load offset=4
+        (get_local $1)
+       )
+      )
+      (i32.const 2)
+     )
      (get_local $0)
-     (i32.const 2)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 64)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (get_local $1)
-      )
-      (i32.load offset=4
-       (get_local $1)
+   (if
+    (i32.load offset=4
+     (tee_local $1
+      (call $~lib/internal/typedarray/TypedArray<i64_i64>#constructor
+       (i32.const 0)
+       (get_local $0)
       )
      )
-     (i32.const 2)
     )
-    (get_local $0)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 65)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.load offset=4
-    (tee_local $1
-     (call $~lib/internal/typedarray/TypedArray<i64,i64>#constructor
-      (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load offset=8
+      (get_local $1)
+     )
+     (i32.shl
       (get_local $0)
+      (i32.const 3)
      )
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 68)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_local $1)
-    )
-    (i32.shl
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (get_local $1)
+       )
+       (i32.load offset=4
+        (get_local $1)
+       )
+      )
+      (i32.const 3)
+     )
      (get_local $0)
-     (i32.const 3)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 69)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
+   (return)
   )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (get_local $1)
-      )
-      (i32.load offset=4
-       (get_local $1)
-      )
-     )
-     (i32.const 3)
-    )
-    (get_local $0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 70)
-     (i32.const 2)
-    )
-    (unreachable)
-   )
-  )
+  (call $~lib/env/abort)
+  (unreachable)
  )
- (func $~lib/internal/typedarray/TypedArray<i32,i32>#__set (; 11 ;) (; has Stack IR ;) (type $iiiv) (param $0 i32) (param $1 i32) (param $2 i32)
+ (func $~lib/internal/typedarray/TypedArray<i32_i32>#__set (; 11 ;) (; has Stack IR ;) (type $iiiv) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
   (if
    (i32.ge_u
@@ -1476,12 +1192,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 55)
-     (i32.const 42)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -1501,7 +1212,7 @@
    (get_local $2)
   )
  )
- (func $~lib/internal/typedarray/TypedArray<i32,i32>#__get (; 12 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/internal/typedarray/TypedArray<i32_i32>#__get (; 12 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (if
    (i32.ge_u
@@ -1521,12 +1232,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 42)
-     (i32.const 42)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -1656,7 +1362,7 @@
   )
   (get_local $3)
  )
- (func $~lib/internal/typedarray/TypedArray<f64,f64>#__set (; 14 ;) (; has Stack IR ;) (type $iiFv) (param $0 i32) (param $1 i32) (param $2 f64)
+ (func $~lib/internal/typedarray/TypedArray<f64_f64>#__set (; 14 ;) (; has Stack IR ;) (type $iiFv) (param $0 i32) (param $1 i32) (param $2 f64)
   (local $3 i32)
   (if
    (i32.ge_u
@@ -1676,12 +1382,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 55)
-     (i32.const 42)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -2379,7 +2080,7 @@
    (get_local $7)
   )
  )
- (func $~lib/internal/typedarray/TypedArray<f64,f64>#sort (; 19 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/internal/typedarray/TypedArray<f64_f64>#sort (; 19 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (local $3 i32)
   (local $4 i32)
@@ -2498,7 +2199,7 @@
   )
   (get_local $0)
  )
- (func $~lib/internal/typedarray/TypedArray<f64,f64>#sort|trampoline~anonymous|0 (; 20 ;) (; has Stack IR ;) (type $FFi) (param $0 f64) (param $1 f64) (result i32)
+ (func $~lib/internal/typedarray/TypedArray<f64_f64>#sort|trampoline~anonymous|0 (; 20 ;) (; has Stack IR ;) (type $FFi) (param $0 f64) (param $1 f64) (result i32)
   (local $2 i64)
   (local $3 i64)
   (i32.sub
@@ -2542,7 +2243,7 @@
    )
   )
  )
- (func $~lib/internal/typedarray/TypedArray<f64,f64>#sort|trampoline (; 21 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/internal/typedarray/TypedArray<f64_f64>#sort|trampoline (; 21 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (block $1of1
    (block $0of1
     (block $outOfRange
@@ -2556,12 +2257,12 @@
     (i32.const 0)
    )
   )
-  (call $~lib/internal/typedarray/TypedArray<f64,f64>#sort
+  (call $~lib/internal/typedarray/TypedArray<f64_f64>#sort
    (get_local $0)
    (get_local $1)
   )
  )
- (func $~lib/internal/typedarray/TypedArray<f64,f64>#__get (; 22 ;) (; has Stack IR ;) (type $iiF) (param $0 i32) (param $1 i32) (result f64)
+ (func $~lib/internal/typedarray/TypedArray<f64_f64>#__get (; 22 ;) (; has Stack IR ;) (type $iiF) (param $0 i32) (param $1 i32) (result f64)
   (local $2 i32)
   (if
    (i32.ge_u
@@ -2581,12 +2282,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 42)
-     (i32.const 42)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -2605,7 +2301,7 @@
    )
   )
  )
- (func $~lib/internal/typedarray/TypedArray<u8,u32>#__set (; 23 ;) (; has Stack IR ;) (type $iiiv) (param $0 i32) (param $1 i32) (param $2 i32)
+ (func $~lib/internal/typedarray/TypedArray<u8_u32>#__set (; 23 ;) (; has Stack IR ;) (type $iiiv) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
   (if
    (i32.ge_u
@@ -2622,12 +2318,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 55)
-     (i32.const 42)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -2646,7 +2337,7 @@
  )
  (func $~lib/typedarray/Uint8ClampedArray#__set (; 24 ;) (; has Stack IR ;) (type $iiiv) (param $0 i32) (param $1 i32) (param $2 i32)
   (local $3 i32)
-  (call $~lib/internal/typedarray/TypedArray<u8,u32>#__set
+  (call $~lib/internal/typedarray/TypedArray<u8_u32>#__set
    (get_local $0)
    (get_local $1)
    (select
@@ -2668,7 +2359,7 @@
    )
   )
  )
- (func $~lib/internal/typedarray/TypedArray<u8,u32>#__get (; 25 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
+ (func $~lib/internal/typedarray/TypedArray<u8_u32>#__get (; 25 ;) (; has Stack IR ;) (type $iii) (param $0 i32) (param $1 i32) (result i32)
   (local $2 i32)
   (if
    (i32.ge_u
@@ -2685,12 +2376,7 @@
     )
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 42)
-     (i32.const 42)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -2708,470 +2394,355 @@
  )
  (func $start (; 26 ;) (; has Stack IR ;) (type $v)
   (local $0 i32)
-  (set_global $~lib/allocator/arena/startOffset
-   (i32.const 176)
-  )
-  (set_global $~lib/allocator/arena/offset
-   (get_global $~lib/allocator/arena/startOffset)
-  )
-  (call $std/typedarray/testInstantiate
-   (i32.const 0)
-  )
-  (call $std/typedarray/testInstantiate
-   (i32.const 5)
-  )
-  (set_global $std/typedarray/arr
-   (call $~lib/internal/typedarray/TypedArray<i32,i32>#constructor
+  (block $folding-inner0
+   (set_global $~lib/allocator/arena/startOffset
+    (i32.const 176)
+   )
+   (set_global $~lib/allocator/arena/offset
+    (get_global $~lib/allocator/arena/startOffset)
+   )
+   (call $std/typedarray/testInstantiate
     (i32.const 0)
-    (i32.const 3)
    )
-  )
-  (call $~lib/internal/typedarray/TypedArray<i32,i32>#__set
-   (get_global $std/typedarray/arr)
-   (i32.const 0)
-   (i32.const 1)
-  )
-  (call $~lib/internal/typedarray/TypedArray<i32,i32>#__set
-   (get_global $std/typedarray/arr)
-   (i32.const 1)
-   (i32.const 2)
-  )
-  (call $~lib/internal/typedarray/TypedArray<i32,i32>#__set
-   (get_global $std/typedarray/arr)
-   (i32.const 2)
-   (i32.const 3)
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (tee_local $0
-        (get_global $std/typedarray/arr)
-       )
-      )
-      (i32.load offset=4
-       (get_local $0)
-      )
-     )
-     (i32.const 2)
-    )
-    (i32.const 3)
+   (call $std/typedarray/testInstantiate
+    (i32.const 5)
    )
-   (block
-    (call $~lib/env/abort
+   (set_global $std/typedarray/arr
+    (call $~lib/internal/typedarray/TypedArray<i32_i32>#constructor
      (i32.const 0)
-     (i32.const 8)
-     (i32.const 80)
-     (i32.const 0)
+     (i32.const 3)
     )
-    (unreachable)
    )
-  )
-  (if
-   (i32.load offset=4
+   (call $~lib/internal/typedarray/TypedArray<i32_i32>#__set
     (get_global $std/typedarray/arr)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 81)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_global $std/typedarray/arr)
-    )
-    (i32.const 12)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 82)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/internal/typedarray/TypedArray<i32,i32>#__get
-     (get_global $std/typedarray/arr)
-     (i32.const 0)
-    )
+    (i32.const 0)
     (i32.const 1)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 83)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/internal/typedarray/TypedArray<i32,i32>#__get
-     (get_global $std/typedarray/arr)
-     (i32.const 1)
-    )
-    (i32.const 2)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 84)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/internal/typedarray/TypedArray<i32,i32>#__get
-     (get_global $std/typedarray/arr)
-     (i32.const 2)
-    )
-    (i32.const 3)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 85)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $std/typedarray/arr
-   (call $~lib/typedarray/Int32Array#subarray
+   (call $~lib/internal/typedarray/TypedArray<i32_i32>#__set
     (get_global $std/typedarray/arr)
     (i32.const 1)
     (i32.const 2)
    )
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (tee_local $0
-        (get_global $std/typedarray/arr)
+   (call $~lib/internal/typedarray/TypedArray<i32_i32>#__set
+    (get_global $std/typedarray/arr)
+    (i32.const 2)
+    (i32.const 3)
+   )
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (tee_local $0
+         (get_global $std/typedarray/arr)
+        )
+       )
+       (i32.load offset=4
+        (get_local $0)
        )
       )
-      (i32.load offset=4
-       (get_local $0)
-      )
-     )
-     (i32.const 2)
-    )
-    (i32.const 1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 88)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=4
-     (get_global $std/typedarray/arr)
-    )
-    (i32.const 4)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 89)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=8
-     (get_global $std/typedarray/arr)
-    )
-    (i32.const 8)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 90)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/internal/typedarray/TypedArray<i32,i32>#__get
-     (get_global $std/typedarray/arr)
-     (i32.const 0)
-    )
-    (i32.const 2)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 91)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $std/typedarray/af64
-   (call $~lib/internal/typedarray/TypedArray<i64,i64>#constructor
-    (i32.const 0)
-    (i32.const 8)
-   )
-  )
-  (call $~lib/internal/typedarray/TypedArray<f64,f64>#__set
-   (get_global $std/typedarray/af64)
-   (i32.const 0)
-   (f64.const 1)
-  )
-  (call $~lib/internal/typedarray/TypedArray<f64,f64>#__set
-   (get_global $std/typedarray/af64)
-   (i32.const 1)
-   (f64.const 2)
-  )
-  (call $~lib/internal/typedarray/TypedArray<f64,f64>#__set
-   (get_global $std/typedarray/af64)
-   (i32.const 2)
-   (f64.const 7)
-  )
-  (call $~lib/internal/typedarray/TypedArray<f64,f64>#__set
-   (get_global $std/typedarray/af64)
-   (i32.const 3)
-   (f64.const 6)
-  )
-  (call $~lib/internal/typedarray/TypedArray<f64,f64>#__set
-   (get_global $std/typedarray/af64)
-   (i32.const 4)
-   (f64.const 5)
-  )
-  (call $~lib/internal/typedarray/TypedArray<f64,f64>#__set
-   (get_global $std/typedarray/af64)
-   (i32.const 5)
-   (f64.const 4)
-  )
-  (call $~lib/internal/typedarray/TypedArray<f64,f64>#__set
-   (get_global $std/typedarray/af64)
-   (i32.const 6)
-   (f64.const 3)
-  )
-  (call $~lib/internal/typedarray/TypedArray<f64,f64>#__set
-   (get_global $std/typedarray/af64)
-   (i32.const 7)
-   (f64.const 8)
-  )
-  (set_global $std/typedarray/af64
-   (call $~lib/typedarray/Float64Array#subarray
-    (get_global $std/typedarray/af64)
-    (i32.const 2)
-    (i32.const 6)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.shr_s
-     (i32.sub
-      (i32.load offset=8
-       (tee_local $0
-        (get_global $std/typedarray/af64)
-       )
-      )
-      (i32.load offset=4
-       (get_local $0)
-      )
+      (i32.const 2)
      )
      (i32.const 3)
     )
-    (i32.const 4)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 105)
-     (i32.const 0)
+   (if
+    (i32.load offset=4
+     (get_global $std/typedarray/arr)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (set_global $~argc
-   (i32.const 0)
-  )
-  (drop
-   (call $~lib/internal/typedarray/TypedArray<f64,f64>#sort|trampoline
-    (get_global $std/typedarray/af64)
-    (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load offset=8
+      (get_global $std/typedarray/arr)
+     )
+     (i32.const 12)
+    )
+    (br $folding-inner0)
    )
-  )
-  (if
-   (tee_local $0
-    (f64.eq
-     (call $~lib/internal/typedarray/TypedArray<f64,f64>#__get
-      (get_global $std/typedarray/af64)
+   (if
+    (i32.ne
+     (call $~lib/internal/typedarray/TypedArray<i32_i32>#__get
+      (get_global $std/typedarray/arr)
       (i32.const 0)
      )
-     (f64.const 4)
+     (i32.const 1)
     )
+    (br $folding-inner0)
    )
-   (set_local $0
-    (f64.eq
-     (call $~lib/internal/typedarray/TypedArray<f64,f64>#__get
-      (get_global $std/typedarray/af64)
+   (if
+    (i32.ne
+     (call $~lib/internal/typedarray/TypedArray<i32_i32>#__get
+      (get_global $std/typedarray/arr)
       (i32.const 1)
      )
-     (f64.const 5)
+     (i32.const 2)
     )
+    (br $folding-inner0)
    )
-  )
-  (if
-   (get_local $0)
-   (set_local $0
-    (f64.eq
-     (call $~lib/internal/typedarray/TypedArray<f64,f64>#__get
-      (get_global $std/typedarray/af64)
+   (if
+    (i32.ne
+     (call $~lib/internal/typedarray/TypedArray<i32_i32>#__get
+      (get_global $std/typedarray/arr)
       (i32.const 2)
      )
-     (f64.const 6)
+     (i32.const 3)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $std/typedarray/arr
+    (call $~lib/typedarray/Int32Array#subarray
+     (get_global $std/typedarray/arr)
+     (i32.const 1)
+     (i32.const 2)
     )
    )
-  )
-  (if
-   (get_local $0)
-   (set_local $0
-    (f64.eq
-     (call $~lib/internal/typedarray/TypedArray<f64,f64>#__get
-      (get_global $std/typedarray/af64)
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (tee_local $0
+         (get_global $std/typedarray/arr)
+        )
+       )
+       (i32.load offset=4
+        (get_local $0)
+       )
+      )
+      (i32.const 2)
+     )
+     (i32.const 1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (i32.load offset=4
+      (get_global $std/typedarray/arr)
+     )
+     (i32.const 4)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (i32.load offset=8
+      (get_global $std/typedarray/arr)
+     )
+     (i32.const 8)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/internal/typedarray/TypedArray<i32_i32>#__get
+      (get_global $std/typedarray/arr)
+      (i32.const 0)
+     )
+     (i32.const 2)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $std/typedarray/af64
+    (call $~lib/internal/typedarray/TypedArray<i64_i64>#constructor
+     (i32.const 0)
+     (i32.const 8)
+    )
+   )
+   (call $~lib/internal/typedarray/TypedArray<f64_f64>#__set
+    (get_global $std/typedarray/af64)
+    (i32.const 0)
+    (f64.const 1)
+   )
+   (call $~lib/internal/typedarray/TypedArray<f64_f64>#__set
+    (get_global $std/typedarray/af64)
+    (i32.const 1)
+    (f64.const 2)
+   )
+   (call $~lib/internal/typedarray/TypedArray<f64_f64>#__set
+    (get_global $std/typedarray/af64)
+    (i32.const 2)
+    (f64.const 7)
+   )
+   (call $~lib/internal/typedarray/TypedArray<f64_f64>#__set
+    (get_global $std/typedarray/af64)
+    (i32.const 3)
+    (f64.const 6)
+   )
+   (call $~lib/internal/typedarray/TypedArray<f64_f64>#__set
+    (get_global $std/typedarray/af64)
+    (i32.const 4)
+    (f64.const 5)
+   )
+   (call $~lib/internal/typedarray/TypedArray<f64_f64>#__set
+    (get_global $std/typedarray/af64)
+    (i32.const 5)
+    (f64.const 4)
+   )
+   (call $~lib/internal/typedarray/TypedArray<f64_f64>#__set
+    (get_global $std/typedarray/af64)
+    (i32.const 6)
+    (f64.const 3)
+   )
+   (call $~lib/internal/typedarray/TypedArray<f64_f64>#__set
+    (get_global $std/typedarray/af64)
+    (i32.const 7)
+    (f64.const 8)
+   )
+   (set_global $std/typedarray/af64
+    (call $~lib/typedarray/Float64Array#subarray
+     (get_global $std/typedarray/af64)
+     (i32.const 2)
+     (i32.const 6)
+    )
+   )
+   (if
+    (i32.ne
+     (i32.shr_s
+      (i32.sub
+       (i32.load offset=8
+        (tee_local $0
+         (get_global $std/typedarray/af64)
+        )
+       )
+       (i32.load offset=4
+        (get_local $0)
+       )
+      )
       (i32.const 3)
      )
-     (f64.const 7)
+     (i32.const 4)
     )
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.eqz
-    (get_local $0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 107)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $std/typedarray/clampedArr
-   (call $~lib/internal/typedarray/TypedArray<i8,i32>#constructor
+   (set_global $~argc
     (i32.const 0)
-    (i32.const 3)
    )
-  )
-  (call $~lib/typedarray/Uint8ClampedArray#__set
-   (get_global $std/typedarray/clampedArr)
-   (i32.const 0)
-   (i32.const -32)
-  )
-  (call $~lib/typedarray/Uint8ClampedArray#__set
-   (get_global $std/typedarray/clampedArr)
-   (i32.const 1)
-   (i32.const 2)
-  )
-  (call $~lib/typedarray/Uint8ClampedArray#__set
-   (get_global $std/typedarray/clampedArr)
-   (i32.const 2)
-   (i32.const 256)
-  )
-  (if
-   (i32.and
-    (call $~lib/internal/typedarray/TypedArray<u8,u32>#__get
-     (get_global $std/typedarray/clampedArr)
+   (drop
+    (call $~lib/internal/typedarray/TypedArray<f64_f64>#sort|trampoline
+     (get_global $std/typedarray/af64)
      (i32.const 0)
     )
-    (i32.const 255)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 114)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.and
-     (call $~lib/internal/typedarray/TypedArray<u8,u32>#__get
-      (get_global $std/typedarray/clampedArr)
-      (i32.const 1)
+   (if
+    (tee_local $0
+     (f64.eq
+      (call $~lib/internal/typedarray/TypedArray<f64_f64>#__get
+       (get_global $std/typedarray/af64)
+       (i32.const 0)
+      )
+      (f64.const 4)
      )
-     (i32.const 255)
     )
+    (set_local $0
+     (f64.eq
+      (call $~lib/internal/typedarray/TypedArray<f64_f64>#__get
+       (get_global $std/typedarray/af64)
+       (i32.const 1)
+      )
+      (f64.const 5)
+     )
+    )
+   )
+   (if
+    (get_local $0)
+    (set_local $0
+     (f64.eq
+      (call $~lib/internal/typedarray/TypedArray<f64_f64>#__get
+       (get_global $std/typedarray/af64)
+       (i32.const 2)
+      )
+      (f64.const 6)
+     )
+    )
+   )
+   (if
+    (get_local $0)
+    (set_local $0
+     (f64.eq
+      (call $~lib/internal/typedarray/TypedArray<f64_f64>#__get
+       (get_global $std/typedarray/af64)
+       (i32.const 3)
+      )
+      (f64.const 7)
+     )
+    )
+   )
+   (if
+    (i32.eqz
+     (get_local $0)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $std/typedarray/clampedArr
+    (call $~lib/internal/typedarray/TypedArray<i8_i32>#constructor
+     (i32.const 0)
+     (i32.const 3)
+    )
+   )
+   (call $~lib/typedarray/Uint8ClampedArray#__set
+    (get_global $std/typedarray/clampedArr)
+    (i32.const 0)
+    (i32.const -32)
+   )
+   (call $~lib/typedarray/Uint8ClampedArray#__set
+    (get_global $std/typedarray/clampedArr)
+    (i32.const 1)
     (i32.const 2)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 115)
-     (i32.const 0)
-    )
-    (unreachable)
+   (call $~lib/typedarray/Uint8ClampedArray#__set
+    (get_global $std/typedarray/clampedArr)
+    (i32.const 2)
+    (i32.const 256)
    )
-  )
-  (if
-   (i32.ne
+   (if
     (i32.and
-     (call $~lib/internal/typedarray/TypedArray<u8,u32>#__get
+     (call $~lib/internal/typedarray/TypedArray<u8_u32>#__get
       (get_global $std/typedarray/clampedArr)
-      (i32.const 2)
+      (i32.const 0)
      )
      (i32.const 255)
     )
-    (i32.const 255)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 8)
-     (i32.const 116)
-     (i32.const 0)
+   (if
+    (i32.ne
+     (i32.and
+      (call $~lib/internal/typedarray/TypedArray<u8_u32>#__get
+       (get_global $std/typedarray/clampedArr)
+       (i32.const 1)
+      )
+      (i32.const 255)
+     )
+     (i32.const 2)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (drop
-   (call $~lib/internal/typedarray/TypedArray<i64,i64>#constructor
-    (i32.const 0)
-    (i32.const 134217727)
+   (if
+    (i32.ne
+     (i32.and
+      (call $~lib/internal/typedarray/TypedArray<u8_u32>#__get
+       (get_global $std/typedarray/clampedArr)
+       (i32.const 2)
+      )
+      (i32.const 255)
+     )
+     (i32.const 255)
+    )
+    (br $folding-inner0)
    )
+   (drop
+    (call $~lib/internal/typedarray/TypedArray<i64_i64>#constructor
+     (i32.const 0)
+     (i32.const 134217727)
+    )
+   )
+   (return)
   )
+  (call $~lib/env/abort)
+  (unreachable)
  )
 )

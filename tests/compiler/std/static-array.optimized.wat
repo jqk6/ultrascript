@@ -1,5 +1,5 @@
 (module
- (type $iiiiv (func (param i32 i32 i32 i32)))
+ (type $v (func))
  (type $iii (func (param i32 i32) (result i32)))
  (type $iiiv (func (param i32 i32 i32)))
  (type $ii (func (param i32) (result i32)))
@@ -9,8 +9,7 @@
  (type $iifv (func (param i32 i32 f32)))
  (type $iiF (func (param i32 i32) (result f64)))
  (type $iiFv (func (param i32 i32 f64)))
- (type $v (func))
- (import "env" "abort" (func $~lib/env/abort (param i32 i32 i32 i32)))
+ (import "env" "abort" (func $~lib/env/abort))
  (global $~lib/allocator/arena/startOffset (mut i32) (i32.const 0))
  (global $~lib/allocator/arena/offset (mut i32) (i32.const 0))
  (memory $0 1)
@@ -495,12 +494,7 @@
     (i32.const 1073741816)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 216)
-     (i32.const 23)
-     (i32.const 2)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -2213,12 +2207,7 @@
       (i32.const 1073741816)
      )
      (block
-      (call $~lib/env/abort
-       (i32.const 0)
-       (i32.const 216)
-       (i32.const 37)
-       (i32.const 4)
-      )
+      (call $~lib/env/abort)
       (unreachable)
      )
     )
@@ -2300,12 +2289,7 @@
        (i32.const 0)
       )
       (block
-       (call $~lib/env/abort
-        (i32.const 0)
-        (i32.const 216)
-        (i32.const 61)
-        (i32.const 4)
-       )
+       (call $~lib/env/abort)
        (unreachable)
       )
      )
@@ -2342,12 +2326,7 @@
       (i32.const 268435454)
      )
      (block
-      (call $~lib/env/abort
-       (i32.const 0)
-       (i32.const 184)
-       (i32.const 87)
-       (i32.const 41)
-      )
+      (call $~lib/env/abort)
       (unreachable)
      )
     )
@@ -2436,12 +2415,7 @@
       (i32.const 134217727)
      )
      (block
-      (call $~lib/env/abort
-       (i32.const 0)
-       (i32.const 184)
-       (i32.const 87)
-       (i32.const 41)
-      )
+      (call $~lib/env/abort)
       (unreachable)
      )
     )
@@ -2530,12 +2504,7 @@
       (i32.const 268435454)
      )
      (block
-      (call $~lib/env/abort
-       (i32.const 0)
-       (i32.const 184)
-       (i32.const 87)
-       (i32.const 41)
-      )
+      (call $~lib/env/abort)
       (unreachable)
      )
     )
@@ -2624,12 +2593,7 @@
       (i32.const 134217727)
      )
      (block
-      (call $~lib/env/abort
-       (i32.const 0)
-       (i32.const 184)
-       (i32.const 87)
-       (i32.const 41)
-      )
+      (call $~lib/env/abort)
       (unreachable)
      )
     )
@@ -2668,315 +2632,192 @@
   )
  )
  (func $start (; 16 ;) (; has Stack IR ;) (type $v)
-  (set_global $~lib/allocator/arena/startOffset
-   (i32.const 280)
-  )
-  (set_global $~lib/allocator/arena/offset
-   (get_global $~lib/allocator/arena/startOffset)
-  )
-  (if
-   (i32.ne
-    (i32.load
-     (i32.const 28)
-    )
-    (i32.const 2)
+  (block $folding-inner0
+   (set_global $~lib/allocator/arena/startOffset
+    (i32.const 280)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 8)
-     (i32.const 0)
-    )
-    (unreachable)
+   (set_global $~lib/allocator/arena/offset
+    (get_global $~lib/allocator/arena/startOffset)
    )
-  )
-  (if
-   (i32.ne
-    (call $~lib/array/Array<i32>#__get
-     (i32.const 24)
-     (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load
+      (i32.const 28)
+     )
+     (i32.const 2)
     )
-    (i32.const 1)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 9)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/array/Array<i32>#__get
-     (i32.const 24)
+   (if
+    (i32.ne
+     (call $~lib/array/Array<i32>#__get
+      (i32.const 24)
+      (i32.const 0)
+     )
      (i32.const 1)
     )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/array/Array<i32>#__get
+      (i32.const 24)
+      (i32.const 1)
+     )
+     (i32.const 2)
+    )
+    (br $folding-inner0)
+   )
+   (call $~lib/array/Array<i32>#__set
+    (i32.const 24)
+    (i32.const 0)
     (i32.const 2)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 10)
-     (i32.const 0)
+   (if
+    (i32.ne
+     (call $~lib/array/Array<i32>#__get
+      (i32.const 24)
+      (i32.const 0)
+     )
+     (i32.const 2)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (call $~lib/array/Array<i32>#__set
-   (i32.const 24)
-   (i32.const 0)
-   (i32.const 2)
-  )
-  (if
-   (i32.ne
-    (call $~lib/array/Array<i32>#__get
-     (i32.const 24)
-     (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load
+      (i32.const 68)
+     )
+     (i32.const 2)
     )
-    (i32.const 2)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 12)
-     (i32.const 0)
+   (if
+    (i64.ne
+     (call $~lib/array/Array<i64>#__get
+      (i32.const 64)
+      (i32.const 0)
+     )
+     (i64.const 3)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.ne
-    (i32.load
-     (i32.const 68)
+   (if
+    (i64.ne
+     (call $~lib/array/Array<i64>#__get
+      (i32.const 64)
+      (i32.const 1)
+     )
+     (i64.const 4)
     )
-    (i32.const 2)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 14)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i64.ne
-    (call $~lib/array/Array<i64>#__get
-     (i32.const 64)
-     (i32.const 0)
-    )
-    (i64.const 3)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 15)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i64.ne
-    (call $~lib/array/Array<i64>#__get
-     (i32.const 64)
-     (i32.const 1)
-    )
+   (call $~lib/array/Array<i64>#__set
+    (i32.const 64)
+    (i32.const 0)
     (i64.const 4)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 16)
-     (i32.const 0)
+   (if
+    (i64.ne
+     (call $~lib/array/Array<i64>#__get
+      (i32.const 64)
+      (i32.const 0)
+     )
+     (i64.const 4)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (call $~lib/array/Array<i64>#__set
-   (i32.const 64)
-   (i32.const 0)
-   (i64.const 4)
-  )
-  (if
-   (i64.ne
-    (call $~lib/array/Array<i64>#__get
-     (i32.const 64)
-     (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load
+      (i32.const 92)
+     )
+     (i32.const 2)
     )
-    (i64.const 4)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 18)
-     (i32.const 0)
+   (if
+    (f32.ne
+     (call $~lib/array/Array<f32>#__get
+      (i32.const 88)
+      (i32.const 0)
+     )
+     (f32.const 1.5)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.ne
-    (i32.load
-     (i32.const 92)
+   (if
+    (f32.ne
+     (call $~lib/array/Array<f32>#__get
+      (i32.const 88)
+      (i32.const 1)
+     )
+     (f32.const 2.5)
     )
-    (i32.const 2)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 20)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f32.ne
-    (call $~lib/array/Array<f32>#__get
-     (i32.const 88)
-     (i32.const 0)
-    )
-    (f32.const 1.5)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 21)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f32.ne
-    (call $~lib/array/Array<f32>#__get
-     (i32.const 88)
-     (i32.const 1)
-    )
+   (call $~lib/array/Array<f32>#__set
+    (i32.const 88)
+    (i32.const 0)
     (f32.const 2.5)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 22)
-     (i32.const 0)
+   (if
+    (f32.ne
+     (call $~lib/array/Array<f32>#__get
+      (i32.const 88)
+      (i32.const 0)
+     )
+     (f32.const 2.5)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (call $~lib/array/Array<f32>#__set
-   (i32.const 88)
-   (i32.const 0)
-   (f32.const 2.5)
-  )
-  (if
-   (f32.ne
-    (call $~lib/array/Array<f32>#__get
-     (i32.const 88)
-     (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load
+      (i32.const 132)
+     )
+     (i32.const 2)
     )
-    (f32.const 2.5)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 24)
-     (i32.const 0)
+   (if
+    (f64.ne
+     (call $~lib/array/Array<f64>#__get
+      (i32.const 128)
+      (i32.const 0)
+     )
+     (f64.const 1.25)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.ne
-    (i32.load
-     (i32.const 132)
+   (if
+    (f64.ne
+     (call $~lib/array/Array<f64>#__get
+      (i32.const 128)
+      (i32.const 1)
+     )
+     (f64.const 2.25)
     )
-    (i32.const 2)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 26)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/array/Array<f64>#__get
-     (i32.const 128)
-     (i32.const 0)
-    )
-    (f64.const 1.25)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 27)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/array/Array<f64>#__get
-     (i32.const 128)
-     (i32.const 1)
-    )
+   (call $~lib/array/Array<f64>#__set
+    (i32.const 128)
+    (i32.const 0)
     (f64.const 2.25)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 28)
-     (i32.const 0)
+   (if
+    (f64.ne
+     (call $~lib/array/Array<f64>#__get
+      (i32.const 128)
+      (i32.const 0)
+     )
+     (f64.const 2.25)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
+   (return)
   )
-  (call $~lib/array/Array<f64>#__set
-   (i32.const 128)
-   (i32.const 0)
-   (f64.const 2.25)
-  )
-  (if
-   (f64.ne
-    (call $~lib/array/Array<f64>#__get
-     (i32.const 128)
-     (i32.const 0)
-    )
-    (f64.const 2.25)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 136)
-     (i32.const 30)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
+  (call $~lib/env/abort)
+  (unreachable)
  )
 )

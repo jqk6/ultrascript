@@ -191,10 +191,6 @@ export namespace f64 {
 
 @builtin export declare function start(): void;
 
-@builtin export declare function ERROR(message?: void): void;
-@builtin export declare function WARNING(message?: void): void;
-@builtin export declare function INFO(message?: void): void;
-
 @builtin export declare function __gc_iterate_roots(fn: (ref: usize) => void): void;
 
 

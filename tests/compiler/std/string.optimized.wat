@@ -1,9 +1,10 @@
 (module
- (type $iiiiv (func (param i32 i32 i32 i32)))
+ (type $v (func))
  (type $iii (func (param i32 i32) (result i32)))
  (type $ii (func (param i32) (result i32)))
  (type $iiiiii (func (param i32 i32 i32 i32 i32) (result i32)))
  (type $iiii (func (param i32 i32 i32) (result i32)))
+ (type $iiiiv (func (param i32 i32 i32 i32)))
  (type $iiiv (func (param i32 i32 i32)))
  (type $iiiiiv (func (param i32 i32 i32 i32 i32)))
  (type $i (func (result i32)))
@@ -11,8 +12,7 @@
  (type $iF (func (param i32) (result f64)))
  (type $Ii (func (param i64) (result i32)))
  (type $iIiv (func (param i32 i64 i32)))
- (type $v (func))
- (import "env" "abort" (func $~lib/env/abort (param i32 i32 i32 i32)))
+ (import "env" "abort" (func $~lib/env/abort))
  (global $~lib/allocator/arena/startOffset (mut i32) (i32.const 0))
  (global $~lib/allocator/arena/offset (mut i32) (i32.const 0))
  (global $std/string/str (mut i32) (i32.const 8))
@@ -116,12 +116,7 @@
     (get_local $0)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 73)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -252,12 +247,7 @@
     (get_local $1)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 120)
-     (i32.const 14)
-     (i32.const 2)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -427,12 +417,7 @@
     (i32.const 1114111)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 31)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -501,12 +486,7 @@
     (get_local $0)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 241)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -573,12 +553,7 @@
     (get_local $0)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 122)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -669,12 +644,7 @@
     (get_local $0)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 210)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -2784,12 +2754,7 @@
     (get_local $0)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 347)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -2928,12 +2893,7 @@
     (get_local $0)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 367)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -3074,12 +3034,7 @@
     (get_local $0)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 226)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -3729,12 +3684,7 @@
             (if
              (get_local $0)
              (block
-              (call $~lib/env/abort
-               (i32.const 0)
-               (i32.const 80)
-               (i32.const 515)
-               (i32.const 10)
-              )
+              (call $~lib/env/abort)
               (unreachable)
              )
             )
@@ -3827,12 +3777,7 @@
     (get_local $0)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 108)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -4223,12 +4168,7 @@
     (get_local $0)
    )
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 387)
-     (i32.const 4)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -4259,12 +4199,7 @@
   (if
    (get_local $2)
    (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 80)
-     (i32.const 392)
-     (i32.const 6)
-    )
+    (call $~lib/env/abort)
     (unreachable)
    )
   )
@@ -4913,2544 +4848,1485 @@
   (get_local $3)
  )
  (func $start (; 43 ;) (; has Stack IR ;) (type $v)
-  (set_global $~lib/allocator/arena/startOffset
-   (i32.const 2800)
-  )
-  (set_global $~lib/allocator/arena/offset
-   (get_global $~lib/allocator/arena/startOffset)
-  )
-  (if
-   (i32.ne
-    (get_global $std/string/str)
-    (i32.const 8)
+  (block $folding-inner0
+   (set_global $~lib/allocator/arena/startOffset
+    (i32.const 2800)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 11)
-     (i32.const 0)
-    )
-    (unreachable)
+   (set_global $~lib/allocator/arena/offset
+    (get_global $~lib/allocator/arena/startOffset)
    )
-  )
-  (if
-   (i32.ne
-    (i32.load
+   (if
+    (i32.ne
      (get_global $std/string/str)
+     (i32.const 8)
     )
-    (i32.const 16)
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 13)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#charCodeAt
-     (get_global $std/string/str)
-     (i32.const 0)
-    )
-    (i32.const 104)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 14)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String.fromCharCode
-      (i32.const 0)
+   (if
+    (i32.ne
+     (i32.load
+      (get_global $std/string/str)
      )
-     (i32.const 112)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
      (i32.const 16)
-     (i32.const 0)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String.fromCharCode
-      (i32.const 54)
-     )
-     (i32.const 176)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 17)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String.fromCharCode
-      (i32.const 65590)
-     )
-     (i32.const 176)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 18)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String.fromCodePoint
-      (i32.const 0)
-     )
-     (i32.const 112)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 20)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String.fromCodePoint
-      (i32.const 54)
-     )
-     (i32.const 176)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 21)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.fromCodePoint
-     (i32.const 119558)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 184)
-     (i32.const 48)
-     (i32.const 22)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String#startsWith
-     (get_global $std/string/str)
-     (i32.const 192)
-     (i32.const 0)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 24)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String#endsWith|trampoline
-     (get_global $std/string/str)
-     (i32.const 216)
-     (i32.const 0)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 25)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String#includes
-     (get_global $std/string/str)
-     (i32.const 232)
-     (i32.const 0)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 26)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padStart|trampoline
+   (if
+    (i32.ne
+     (call $~lib/string/String#charCodeAt
       (get_global $std/string/str)
       (i32.const 0)
-      (i32.const 0)
      )
-     (get_global $std/string/str)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 28)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padStart|trampoline
-      (get_global $std/string/str)
-      (i32.const 15)
-      (i32.const 0)
-     )
-     (get_global $std/string/str)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 29)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padStart|trampoline
-      (i32.const 256)
-      (i32.const 3)
-      (i32.const 0)
-     )
-     (i32.const 264)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 30)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padStart
-      (i32.const 256)
-      (i32.const 10)
-      (i32.const 256)
-     )
-     (i32.const 256)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 31)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padStart
-      (i32.const 280)
-      (i32.const 100)
-      (i32.const 256)
-     )
-     (i32.const 280)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 32)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padStart|trampoline
-      (i32.const 288)
-      (i32.const 5)
-      (i32.const 0)
-     )
-     (i32.const 304)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 33)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padStart
-      (i32.const 288)
-      (i32.const 6)
-      (i32.const 320)
-     )
-     (i32.const 336)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 34)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padStart
-      (i32.const 288)
-      (i32.const 8)
-      (i32.const 320)
-     )
-     (i32.const 352)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 35)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padEnd|trampoline
-      (get_global $std/string/str)
-      (i32.const 0)
-      (i32.const 0)
-     )
-     (get_global $std/string/str)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 37)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padEnd|trampoline
-      (get_global $std/string/str)
-      (i32.const 15)
-      (i32.const 0)
-     )
-     (get_global $std/string/str)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 38)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padEnd|trampoline
-      (i32.const 256)
-      (i32.const 3)
-      (i32.const 0)
-     )
-     (i32.const 264)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 39)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padEnd
-      (i32.const 256)
-      (i32.const 10)
-      (i32.const 256)
-     )
-     (i32.const 256)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 40)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padEnd
-      (i32.const 280)
-      (i32.const 100)
-      (i32.const 256)
-     )
-     (i32.const 280)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 41)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padEnd|trampoline
-      (i32.const 288)
-      (i32.const 5)
-      (i32.const 0)
-     )
-     (i32.const 376)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 42)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padEnd
-      (i32.const 288)
-      (i32.const 6)
-      (i32.const 288)
-     )
-     (i32.const 392)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 43)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#padEnd
-      (i32.const 288)
-      (i32.const 8)
-      (i32.const 288)
-     )
-     (i32.const 408)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 44)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (call $~lib/string/String#indexOf
-    (i32.const 256)
-    (i32.const 256)
-    (i32.const 0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 46)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#indexOf
-     (i32.const 256)
-     (i32.const 192)
-     (i32.const 0)
-    )
-    (i32.const -1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 47)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (call $~lib/string/String#indexOf
-    (get_global $std/string/str)
-    (i32.const 256)
-    (i32.const 0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 48)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#indexOf
-     (get_global $std/string/str)
-     (i32.const 432)
-     (i32.const 0)
-    )
-    (i32.const 2)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 49)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#indexOf
-     (get_global $std/string/str)
-     (i32.const 440)
-     (i32.const 0)
-    )
-    (i32.const -1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 50)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#indexOf
-     (get_global $std/string/str)
-     (i32.const 432)
-     (i32.const 2)
-    )
-    (i32.const 2)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 51)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#indexOf
-     (get_global $std/string/str)
-     (i32.const 432)
-     (i32.const 3)
-    )
-    (i32.const -1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 52)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#indexOf
-     (get_global $std/string/str)
-     (i32.const 448)
-     (i32.const -1)
-    )
-    (i32.const 2)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 53)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (call $~lib/string/String#lastIndexOf|trampoline
-    (i32.const 256)
-    (i32.const 256)
-    (i32.const 0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 55)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#lastIndexOf|trampoline
-     (i32.const 256)
-     (i32.const 192)
-     (i32.const 0)
-    )
-    (i32.const -1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 56)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#lastIndexOf|trampoline
-     (get_global $std/string/str)
-     (i32.const 256)
-     (i32.const 0)
-    )
-    (i32.load
-     (get_global $std/string/str)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 57)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#lastIndexOf|trampoline
-     (get_global $std/string/str)
-     (i32.const 432)
-     (i32.const 0)
-    )
-    (i32.const 2)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 58)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#lastIndexOf|trampoline
-     (get_global $std/string/str)
-     (i32.const 440)
-     (i32.const 0)
-    )
-    (i32.const -1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 59)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $~argc
-   (i32.const 1)
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#lastIndexOf|trampoline
-     (get_global $std/string/str)
-     (i32.const 464)
-     (i32.const 0)
-    )
-    (i32.const 15)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 60)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#lastIndexOf
-     (get_global $std/string/str)
-     (i32.const 432)
-     (i32.const 2)
-    )
-    (i32.const 2)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 61)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#lastIndexOf
-     (get_global $std/string/str)
-     (i32.const 432)
-     (i32.const 3)
-    )
-    (i32.const 2)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 62)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#lastIndexOf
-     (get_global $std/string/str)
-     (i32.const 448)
-     (i32.const -1)
-    )
-    (i32.const -1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 63)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (call $~lib/string/String#lastIndexOf
-     (get_global $std/string/str)
-     (i32.const 472)
-     (i32.const 0)
-    )
-    (i32.const -1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 64)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (call $~lib/string/String#lastIndexOf
-    (get_global $std/string/str)
-    (i32.const 192)
-    (i32.const 0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 65)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseInt
-     (i32.const 480)
-     (i32.const 0)
-    )
-    (f64.const 0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 71)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseInt
-     (i32.const 488)
-     (i32.const 0)
-    )
-    (f64.const 1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 72)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseInt
-     (i32.const 496)
-     (i32.const 0)
-    )
-    (f64.const 5)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 73)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseInt
-     (i32.const 512)
-     (i32.const 0)
-    )
-    (f64.const 455)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 74)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseInt
-     (i32.const 528)
-     (i32.const 0)
-    )
-    (f64.const 3855)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 75)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseInt
-     (i32.const 544)
-     (i32.const 0)
-    )
-    (f64.const 3855)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 76)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseInt
-     (i32.const 560)
-     (i32.const 0)
-    )
-    (f64.const 11)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 77)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseInt
-     (i32.const 576)
-     (i32.const 0)
-    )
-    (f64.const 1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 78)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseFloat
-     (i32.const 480)
-    )
-    (f64.const 0)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 80)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseFloat
-     (i32.const 488)
-    )
-    (f64.const 1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 81)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseFloat
-     (i32.const 592)
-    )
-    (f64.const 0.1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 82)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseFloat
-     (i32.const 608)
-    )
-    (f64.const 0.25)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 83)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (f64.ne
-    (call $~lib/string/parseFloat
-     (i32.const 624)
-    )
-    (f64.const 0.1)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 84)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $std/string/c
-   (call $~lib/string/String.__concat
-    (i32.const 280)
-    (i32.const 648)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (get_global $std/string/c)
-     (i32.const 656)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 87)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__ne
-     (get_global $std/string/c)
-     (i32.const 280)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 88)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (i32.const 256)
-     (i32.const 256)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 89)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__ne
-     (i32.const 256)
-     (get_global $std/string/nullStr)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 90)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__gt
-     (i32.const 648)
-     (i32.const 280)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 92)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__gt
-     (i32.const 664)
-     (i32.const 280)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 93)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__gte
-     (i32.const 664)
-     (i32.const 672)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 94)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__gt
-     (i32.const 664)
-     (i32.const 656)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 95)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (call $~lib/string/String.__lt
-    (i32.const 664)
-    (i32.const 656)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 96)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (call $~lib/string/String.__lt
-    (i32.const 648)
-    (get_global $std/string/nullStr)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 98)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (call $~lib/string/String.__lt
-    (get_global $std/string/nullStr)
-    (i32.const 648)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 99)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__gt
-     (i32.const 288)
-     (i32.const 256)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 101)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__lt
-     (i32.const 256)
-     (i32.const 288)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 102)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__gte
-     (i32.const 288)
-     (i32.const 256)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 103)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__lte
-     (i32.const 256)
-     (i32.const 288)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
      (i32.const 104)
-     (i32.const 0)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (call $~lib/string/String.__lt
-    (i32.const 288)
-    (i32.const 256)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 105)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (call $~lib/string/String.__gt
-    (i32.const 256)
-    (i32.const 288)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 106)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (call $~lib/string/String.__lt
-    (i32.const 256)
-    (i32.const 256)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 107)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (call $~lib/string/String.__gt
-    (i32.const 256)
-    (i32.const 256)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 108)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__gte
-     (i32.const 256)
-     (i32.const 256)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 109)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__lte
-     (i32.const 256)
-     (i32.const 256)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 110)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (set_global $std/string/a
-   (call $~lib/string/String.fromCodePoint
-    (i32.const 65377)
-   )
-  )
-  (set_global $std/string/b
-   (call $~lib/string/String.__concat
-    (call $~lib/string/String.fromCodePoint
-     (i32.const 55296)
-    )
-    (call $~lib/string/String.fromCodePoint
-     (i32.const 56322)
-    )
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__gt
-     (get_global $std/string/a)
-     (get_global $std/string/b)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 114)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load
-     (i32.const 320)
-    )
-    (i32.const 3)
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 116)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#repeat
-      (i32.const 256)
-      (i32.const 100)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String.fromCharCode
+       (i32.const 0)
+      )
+      (i32.const 112)
      )
-     (i32.const 256)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 118)
-     (i32.const 0)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String.fromCharCode
+       (i32.const 54)
+      )
+      (i32.const 176)
+     )
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#repeat
-      (i32.const 280)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String.fromCharCode
+       (i32.const 65590)
+      )
+      (i32.const 176)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String.fromCodePoint
+       (i32.const 0)
+      )
+      (i32.const 112)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String.fromCodePoint
+       (i32.const 54)
+      )
+      (i32.const 176)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.fromCodePoint
+      (i32.const 119558)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String#startsWith
+      (get_global $std/string/str)
+      (i32.const 192)
       (i32.const 0)
      )
-     (i32.const 256)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 119)
-     (i32.const 0)
-    )
-    (unreachable)
+   (set_global $~argc
+    (i32.const 1)
    )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#repeat
-      (i32.const 280)
-      (i32.const 1)
+   (if
+    (i32.eqz
+     (call $~lib/string/String#endsWith|trampoline
+      (get_global $std/string/str)
+      (i32.const 216)
+      (i32.const 0)
      )
-     (i32.const 280)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 120)
-     (i32.const 0)
+   (if
+    (i32.eqz
+     (call $~lib/string/String#includes
+      (get_global $std/string/str)
+      (i32.const 232)
+      (i32.const 0)
+     )
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#repeat
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padStart|trampoline
+       (get_global $std/string/str)
+       (i32.const 0)
+       (i32.const 0)
+      )
+      (get_global $std/string/str)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padStart|trampoline
+       (get_global $std/string/str)
+       (i32.const 15)
+       (i32.const 0)
+      )
+      (get_global $std/string/str)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padStart|trampoline
+       (i32.const 256)
+       (i32.const 3)
+       (i32.const 0)
+      )
+      (i32.const 264)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padStart
+       (i32.const 256)
+       (i32.const 10)
+       (i32.const 256)
+      )
+      (i32.const 256)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padStart
+       (i32.const 280)
+       (i32.const 100)
+       (i32.const 256)
+      )
       (i32.const 280)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padStart|trampoline
+       (i32.const 288)
+       (i32.const 5)
+       (i32.const 0)
+      )
+      (i32.const 304)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padStart
+       (i32.const 288)
+       (i32.const 6)
+       (i32.const 320)
+      )
+      (i32.const 336)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padStart
+       (i32.const 288)
+       (i32.const 8)
+       (i32.const 320)
+      )
+      (i32.const 352)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padEnd|trampoline
+       (get_global $std/string/str)
+       (i32.const 0)
+       (i32.const 0)
+      )
+      (get_global $std/string/str)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padEnd|trampoline
+       (get_global $std/string/str)
+       (i32.const 15)
+       (i32.const 0)
+      )
+      (get_global $std/string/str)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padEnd|trampoline
+       (i32.const 256)
+       (i32.const 3)
+       (i32.const 0)
+      )
+      (i32.const 264)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padEnd
+       (i32.const 256)
+       (i32.const 10)
+       (i32.const 256)
+      )
+      (i32.const 256)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padEnd
+       (i32.const 280)
+       (i32.const 100)
+       (i32.const 256)
+      )
+      (i32.const 280)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padEnd|trampoline
+       (i32.const 288)
+       (i32.const 5)
+       (i32.const 0)
+      )
+      (i32.const 376)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padEnd
+       (i32.const 288)
+       (i32.const 6)
+       (i32.const 288)
+      )
+      (i32.const 392)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#padEnd
+       (i32.const 288)
+       (i32.const 8)
+       (i32.const 288)
+      )
+      (i32.const 408)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (call $~lib/string/String#indexOf
+     (i32.const 256)
+     (i32.const 256)
+     (i32.const 0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#indexOf
+      (i32.const 256)
+      (i32.const 192)
+      (i32.const 0)
+     )
+     (i32.const -1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (call $~lib/string/String#indexOf
+     (get_global $std/string/str)
+     (i32.const 256)
+     (i32.const 0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#indexOf
+      (get_global $std/string/str)
+      (i32.const 432)
+      (i32.const 0)
+     )
+     (i32.const 2)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#indexOf
+      (get_global $std/string/str)
+      (i32.const 440)
+      (i32.const 0)
+     )
+     (i32.const -1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#indexOf
+      (get_global $std/string/str)
+      (i32.const 432)
       (i32.const 2)
      )
-     (i32.const 672)
+     (i32.const 2)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 121)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#repeat
-      (i32.const 280)
+   (if
+    (i32.ne
+     (call $~lib/string/String#indexOf
+      (get_global $std/string/str)
+      (i32.const 432)
       (i32.const 3)
      )
-     (i32.const 680)
+     (i32.const -1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#indexOf
+      (get_global $std/string/str)
+      (i32.const 448)
+      (i32.const -1)
+     )
+     (i32.const 2)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (call $~lib/string/String#lastIndexOf|trampoline
+     (i32.const 256)
+     (i32.const 256)
+     (i32.const 0)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#lastIndexOf|trampoline
+      (i32.const 256)
+      (i32.const 192)
+      (i32.const 0)
+     )
+     (i32.const -1)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#lastIndexOf|trampoline
+      (get_global $std/string/str)
+      (i32.const 256)
+      (i32.const 0)
+     )
+     (i32.load
+      (get_global $std/string/str)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#lastIndexOf|trampoline
+      (get_global $std/string/str)
+      (i32.const 432)
+      (i32.const 0)
+     )
+     (i32.const 2)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#lastIndexOf|trampoline
+      (get_global $std/string/str)
+      (i32.const 440)
+      (i32.const 0)
+     )
+     (i32.const -1)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $~argc
+    (i32.const 1)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#lastIndexOf|trampoline
+      (get_global $std/string/str)
+      (i32.const 464)
+      (i32.const 0)
+     )
+     (i32.const 15)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#lastIndexOf
+      (get_global $std/string/str)
+      (i32.const 432)
+      (i32.const 2)
+     )
+     (i32.const 2)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#lastIndexOf
+      (get_global $std/string/str)
+      (i32.const 432)
+      (i32.const 3)
+     )
+     (i32.const 2)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#lastIndexOf
+      (get_global $std/string/str)
+      (i32.const 448)
+      (i32.const -1)
+     )
+     (i32.const -1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.ne
+     (call $~lib/string/String#lastIndexOf
+      (get_global $std/string/str)
+      (i32.const 472)
+      (i32.const 0)
+     )
+     (i32.const -1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (call $~lib/string/String#lastIndexOf
+     (get_global $std/string/str)
+     (i32.const 192)
+     (i32.const 0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseInt
+      (i32.const 480)
+      (i32.const 0)
+     )
+     (f64.const 0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseInt
+      (i32.const 488)
+      (i32.const 0)
+     )
+     (f64.const 1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseInt
+      (i32.const 496)
+      (i32.const 0)
+     )
+     (f64.const 5)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseInt
+      (i32.const 512)
+      (i32.const 0)
+     )
+     (f64.const 455)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseInt
+      (i32.const 528)
+      (i32.const 0)
+     )
+     (f64.const 3855)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseInt
+      (i32.const 544)
+      (i32.const 0)
+     )
+     (f64.const 3855)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseInt
+      (i32.const 560)
+      (i32.const 0)
+     )
+     (f64.const 11)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseInt
+      (i32.const 576)
+      (i32.const 0)
+     )
+     (f64.const 1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseFloat
+      (i32.const 480)
+     )
+     (f64.const 0)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseFloat
+      (i32.const 488)
+     )
+     (f64.const 1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseFloat
+      (i32.const 592)
+     )
+     (f64.const 0.1)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseFloat
+      (i32.const 608)
+     )
+     (f64.const 0.25)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (f64.ne
+     (call $~lib/string/parseFloat
+      (i32.const 624)
+     )
+     (f64.const 0.1)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $std/string/c
+    (call $~lib/string/String.__concat
+     (i32.const 280)
+     (i32.const 648)
     )
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 122)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#repeat
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (get_global $std/string/c)
       (i32.const 656)
-      (i32.const 4)
      )
-     (i32.const 696)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 123)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#repeat
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__ne
+      (get_global $std/string/c)
       (i32.const 280)
-      (i32.const 5)
      )
-     (i32.const 720)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 124)
-     (i32.const 0)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (i32.const 256)
+      (i32.const 256)
+     )
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#repeat
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__ne
+      (i32.const 256)
+      (get_global $std/string/nullStr)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__gt
+      (i32.const 648)
       (i32.const 280)
-      (i32.const 6)
      )
-     (i32.const 736)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 125)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/string/String#repeat
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__gt
+      (i32.const 664)
       (i32.const 280)
-      (i32.const 7)
      )
-     (i32.const 752)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 126)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 0)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__gte
+      (i32.const 664)
+      (i32.const 672)
      )
-     (i32.const 480)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 128)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 1)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__gt
+      (i32.const 664)
+      (i32.const 656)
      )
-     (i32.const 488)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 129)
-     (i32.const 0)
+   (if
+    (call $~lib/string/String.__lt
+     (i32.const 664)
+     (i32.const 656)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 8)
+   (if
+    (call $~lib/string/String.__lt
+     (i32.const 648)
+     (get_global $std/string/nullStr)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (call $~lib/string/String.__lt
+     (get_global $std/string/nullStr)
+     (i32.const 648)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__gt
+      (i32.const 288)
+      (i32.const 256)
      )
-     (i32.const 1368)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 130)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 123)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__lt
+      (i32.const 256)
+      (i32.const 288)
      )
-     (i32.const 320)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 131)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const -1000)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__gte
+      (i32.const 288)
+      (i32.const 256)
      )
-     (i32.const 1376)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 132)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 1234)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__lte
+      (i32.const 256)
+      (i32.const 288)
      )
-     (i32.const 1392)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 133)
-     (i32.const 0)
+   (if
+    (call $~lib/string/String.__lt
+     (i32.const 288)
+     (i32.const 256)
     )
-    (unreachable)
+    (br $folding-inner0)
    )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 12345)
+   (if
+    (call $~lib/string/String.__gt
+     (i32.const 256)
+     (i32.const 288)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (call $~lib/string/String.__lt
+     (i32.const 256)
+     (i32.const 256)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (call $~lib/string/String.__gt
+     (i32.const 256)
+     (i32.const 256)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__gte
+      (i32.const 256)
+      (i32.const 256)
      )
-     (i32.const 1408)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 134)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 123456)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__lte
+      (i32.const 256)
+      (i32.const 256)
      )
-     (i32.const 1424)
+    )
+    (br $folding-inner0)
+   )
+   (set_global $std/string/a
+    (call $~lib/string/String.fromCodePoint
+     (i32.const 65377)
     )
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 135)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 1111111)
+   (set_global $std/string/b
+    (call $~lib/string/String.__concat
+     (call $~lib/string/String.fromCodePoint
+      (i32.const 55296)
      )
-     (i32.const 1440)
-    )
-   )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 136)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 1234567)
+     (call $~lib/string/String.fromCodePoint
+      (i32.const 56322)
      )
-     (i32.const 1464)
     )
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 137)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 2147483646)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__gt
+      (get_global $std/string/a)
+      (get_global $std/string/b)
      )
-     (i32.const 1488)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 138)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const 2147483647)
+   (if
+    (i32.ne
+     (i32.load
+      (i32.const 320)
      )
-     (i32.const 1512)
+     (i32.const 3)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 139)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const -2147483648)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#repeat
+       (i32.const 256)
+       (i32.const 100)
+      )
+      (i32.const 256)
      )
-     (i32.const 1536)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 140)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa32
-      (i32.const -1)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#repeat
+       (i32.const 280)
+       (i32.const 0)
+      )
+      (i32.const 256)
      )
-     (i32.const 1568)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 141)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa32
-      (i32.const 0)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#repeat
+       (i32.const 280)
+       (i32.const 1)
+      )
+      (i32.const 280)
      )
-     (i32.const 480)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 143)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa32
-      (i32.const 1000)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#repeat
+       (i32.const 280)
+       (i32.const 2)
+      )
+      (i32.const 672)
      )
-     (i32.const 1576)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 144)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa32
-      (i32.const 2147483647)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#repeat
+       (i32.const 280)
+       (i32.const 3)
+      )
+      (i32.const 680)
      )
-     (i32.const 1512)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 145)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa32
-      (i32.const -2147483648)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#repeat
+       (i32.const 656)
+       (i32.const 4)
+      )
+      (i32.const 696)
      )
-     (i32.const 1592)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 146)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa32
-      (i32.const -1)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#repeat
+       (i32.const 280)
+       (i32.const 5)
+      )
+      (i32.const 720)
      )
-     (i32.const 1616)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 147)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 0)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#repeat
+       (i32.const 280)
+       (i32.const 6)
+      )
+      (i32.const 736)
      )
-     (i32.const 480)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 149)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 1234)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/string/String#repeat
+       (i32.const 280)
+       (i32.const 7)
+      )
+      (i32.const 752)
      )
-     (i32.const 1392)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 150)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 99999999)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 0)
+      )
+      (i32.const 480)
      )
-     (i32.const 2232)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 151)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 100000000)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 1)
+      )
+      (i32.const 488)
      )
-     (i32.const 2256)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 152)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 4294967295)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 8)
+      )
+      (i32.const 1368)
      )
-     (i32.const 1616)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 153)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 68719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 123)
+      )
+      (i32.const 320)
      )
-     (i32.const 2280)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 154)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 868719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const -1000)
+      )
+      (i32.const 1376)
      )
-     (i32.const 2312)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 155)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 999868719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 1234)
+      )
+      (i32.const 1392)
      )
-     (i32.const 2344)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 156)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 9999868719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 12345)
+      )
+      (i32.const 1408)
      )
-     (i32.const 2384)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 157)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const 19999868719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 123456)
+      )
+      (i32.const 1424)
      )
-     (i32.const 2424)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 158)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/utoa64
-      (i64.const -1)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 1111111)
+      )
+      (i32.const 1440)
      )
-     (i32.const 2464)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 159)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const 0)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 1234567)
+      )
+      (i32.const 1464)
      )
-     (i32.const 480)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 161)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const -1234)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 2147483646)
+      )
+      (i32.const 1488)
      )
-     (i32.const 2512)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 162)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const 4294967295)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const 2147483647)
+      )
+      (i32.const 1512)
      )
-     (i32.const 1616)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 163)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const -4294967295)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const -2147483648)
+      )
+      (i32.const 1536)
      )
-     (i32.const 2528)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 164)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const 68719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa32
+       (i32.const -1)
+      )
+      (i32.const 1568)
      )
-     (i32.const 2280)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 165)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const -68719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa32
+       (i32.const 0)
+      )
+      (i32.const 480)
      )
-     (i32.const 2560)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 166)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const -868719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa32
+       (i32.const 1000)
+      )
+      (i32.const 1576)
      )
-     (i32.const 2592)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 167)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const -999868719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa32
+       (i32.const 2147483647)
+      )
+      (i32.const 1512)
      )
-     (i32.const 2624)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 168)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const -19999868719476735)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa32
+       (i32.const -2147483648)
+      )
+      (i32.const 1592)
      )
-     (i32.const 2664)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 169)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const 9223372036854775807)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa32
+       (i32.const -1)
+      )
+      (i32.const 1616)
      )
-     (i32.const 2704)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 170)
-     (i32.const 0)
-    )
-    (unreachable)
-   )
-  )
-  (if
-   (i32.eqz
-    (call $~lib/string/String.__eq
-     (call $~lib/internal/itoa/itoa64
-      (i64.const -9223372036854775808)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 0)
+      )
+      (i32.const 480)
      )
-     (i32.const 2752)
     )
+    (br $folding-inner0)
    )
-   (block
-    (call $~lib/env/abort
-     (i32.const 0)
-     (i32.const 48)
-     (i32.const 171)
-     (i32.const 0)
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 1234)
+      )
+      (i32.const 1392)
+     )
     )
-    (unreachable)
+    (br $folding-inner0)
    )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 99999999)
+      )
+      (i32.const 2232)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 100000000)
+      )
+      (i32.const 2256)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 4294967295)
+      )
+      (i32.const 1616)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 68719476735)
+      )
+      (i32.const 2280)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 868719476735)
+      )
+      (i32.const 2312)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 999868719476735)
+      )
+      (i32.const 2344)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 9999868719476735)
+      )
+      (i32.const 2384)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const 19999868719476735)
+      )
+      (i32.const 2424)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/utoa64
+       (i64.const -1)
+      )
+      (i32.const 2464)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const 0)
+      )
+      (i32.const 480)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const -1234)
+      )
+      (i32.const 2512)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const 4294967295)
+      )
+      (i32.const 1616)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const -4294967295)
+      )
+      (i32.const 2528)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const 68719476735)
+      )
+      (i32.const 2280)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const -68719476735)
+      )
+      (i32.const 2560)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const -868719476735)
+      )
+      (i32.const 2592)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const -999868719476735)
+      )
+      (i32.const 2624)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const -19999868719476735)
+      )
+      (i32.const 2664)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const 9223372036854775807)
+      )
+      (i32.const 2704)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/string/String.__eq
+      (call $~lib/internal/itoa/itoa64
+       (i64.const -9223372036854775808)
+      )
+      (i32.const 2752)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (return)
   )
+  (call $~lib/env/abort)
+  (unreachable)
  )
 )
