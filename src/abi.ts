@@ -470,7 +470,7 @@ export class Abi {
           body.push("    }");
         }
       }
-      body.push(`    ${contractVarName}.onStop();`);
+      // body.push(`    ${contractVarName}.onStop();`);
       body.push("  }");
 
       if (hasActionDecorator) {
