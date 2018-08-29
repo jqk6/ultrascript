@@ -375,7 +375,10 @@ export class Abi {
         let filedType = filedDeclare.type;
 
         if (filedType) {
-          struct.fields.push({ name: filedName, type: filedType.range.toString() });
+          let declaration:VariableDeclaration = new VariableDeclaration(this.program, filedType).resolveAbiParameterType();
+          let fieldTypeName = filedType.range.toString();
+          let type =  !declaration.isArray ? fieldTypeName :  `${declaration.getBaseTypeName(fieldTypeName)}[]`;
+          struct.fields.push({ name: filedName, type:type });
         }
       }
     }
