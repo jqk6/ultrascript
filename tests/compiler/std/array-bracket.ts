@@ -6,7 +6,6 @@ function toArray(range: i32): u8[] {
     return uft8;
 }
 
-
 function newArray(range: i32): u8[] {
     var uft8: u8[] = new Array<u8>();
     for (let index = 0 ; index < range; index ++) {
