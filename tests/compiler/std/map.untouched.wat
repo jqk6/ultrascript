@@ -14663,7 +14663,105 @@
    (unreachable)
   )
  )
- (func $start (; 125 ;) (type $v)
+ (func $~lib/array/Array<u64>#includes (; 125 ;) (type $iIii) (param $0 i32) (param $1 i64) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (local $5 i32)
+  (local $6 i32)
+  (set_local $3
+   (i32.load offset=4
+    (get_local $0)
+   )
+  )
+  (if
+   (if (result i32)
+    (tee_local $4
+     (i32.eq
+      (get_local $3)
+      (i32.const 0)
+     )
+    )
+    (get_local $4)
+    (i32.ge_s
+     (get_local $2)
+     (get_local $3)
+    )
+   )
+   (return
+    (i32.const 0)
+   )
+  )
+  (if
+   (i32.lt_s
+    (get_local $2)
+    (i32.const 0)
+   )
+   (set_local $2
+    (select
+     (tee_local $4
+      (i32.add
+       (get_local $3)
+       (get_local $2)
+      )
+     )
+     (tee_local $5
+      (i32.const 0)
+     )
+     (i32.gt_s
+      (get_local $4)
+      (get_local $5)
+     )
+    )
+   )
+  )
+  (set_local $6
+   (i32.load
+    (get_local $0)
+   )
+  )
+  (block $break|0
+   (loop $continue|0
+    (if
+     (i32.lt_s
+      (get_local $2)
+      (get_local $3)
+     )
+     (block
+      (block
+       (if
+        (i64.eq
+         (block $~lib/internal/arraybuffer/loadUnsafe<u64_u64>|inlined.2 (result i64)
+          (i64.load offset=8
+           (i32.add
+            (get_local $6)
+            (i32.shl
+             (get_local $2)
+             (i32.const 3)
+            )
+           )
+          )
+         )
+         (get_local $1)
+        )
+        (return
+         (i32.const 1)
+        )
+       )
+       (set_local $2
+        (i32.add
+         (get_local $2)
+         (i32.const 1)
+        )
+       )
+      )
+      (br $continue|0)
+     )
+    )
+   )
+  )
+  (i32.const 0)
+ )
+ (func $start (; 126 ;) (type $v)
   (local $0 i32)
   (local $1 i32)
   (set_global $~lib/allocator/arena/startOffset
@@ -14811,6 +14909,32 @@
       )
      )
      (i32.const 2)
+    )
+   )
+   (block
+    (call $~lib/env/abort)
+    (unreachable)
+   )
+  )
+  (if
+   (i32.eqz
+    (call $~lib/array/Array<u64>#includes
+     (get_global $std/map/keys)
+     (i64.const 12)
+     (i32.const 0)
+    )
+   )
+   (block
+    (call $~lib/env/abort)
+    (unreachable)
+   )
+  )
+  (if
+   (i32.eqz
+    (call $~lib/array/Array<u64>#includes
+     (get_global $std/map/keys)
+     (i64.const 24)
+     (i32.const 0)
     )
    )
    (block

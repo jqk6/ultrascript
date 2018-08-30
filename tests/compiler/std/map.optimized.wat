@@ -10469,161 +10469,261 @@
    )
   )
  )
- (func $start (; 86 ;) (; has Stack IR ;) (type $v)
-  (local $0 i32)
-  (set_global $~lib/allocator/arena/startOffset
-   (i32.const 176)
+ (func $~lib/array/Array<u64>#includes (; 86 ;) (; has Stack IR ;) (type $iIii) (param $0 i32) (param $1 i64) (param $2 i32) (result i32)
+  (local $3 i32)
+  (local $4 i32)
+  (if
+   (i32.eqz
+    (tee_local $3
+     (i32.eqz
+      (tee_local $4
+       (i32.load offset=4
+        (get_local $0)
+       )
+      )
+     )
+    )
+   )
+   (set_local $3
+    (i32.ge_s
+     (get_local $2)
+     (get_local $4)
+    )
+   )
   )
-  (set_global $~lib/allocator/arena/offset
-   (get_global $~lib/allocator/arena/startOffset)
-  )
-  (call $std/map/test<i8_i32>)
-  (call $std/map/test<u8_i32>)
-  (call $std/map/test<i16_i32>)
-  (call $std/map/test<u16_i32>)
-  (call $std/map/test<i32_i32>)
-  (call $std/map/test<u32_i32>)
-  (call $std/map/test<i64_i32>)
-  (call $std/map/test<u64_i32>)
-  (call $std/map/test<f32_i32>)
-  (call $std/map/test<f64_i32>)
-  (set_global $std/map/map
-   (call $~lib/map/Map<u64_u64>#constructor
+  (if
+   (get_local $3)
+   (return
     (i32.const 0)
    )
   )
-  (call $~lib/map/Map<u64_u64>#set
-   (get_global $std/map/map)
-   (i64.const 12)
-   (i64.const 12)
-  )
-  (set_global $std/map/keys
-   (call $~lib/map/Map<u64_u64>#keys
-    (get_global $std/map/map)
-   )
-  )
   (if
-   (i32.ne
-    (i32.load offset=4
-     (get_global $std/map/keys)
-    )
-    (i32.const 1)
+   (i32.lt_s
+    (get_local $2)
+    (i32.const 0)
    )
-   (block
-    (call $~lib/env/abort)
-    (unreachable)
+   (set_local $2
+    (select
+     (tee_local $3
+      (i32.add
+       (get_local $4)
+       (get_local $2)
+      )
+     )
+     (i32.const 0)
+     (i32.gt_s
+      (get_local $3)
+      (i32.const 0)
+     )
+    )
    )
   )
-  (block $break|0
-   (loop $repeat|0
-    (br_if $break|0
-     (i32.ge_s
-      (get_local $0)
-      (i32.load offset=4
-       (get_global $std/map/keys)
-      )
-     )
+  (set_local $0
+   (i32.load
+    (get_local $0)
+   )
+  )
+  (loop $continue|0
+   (if
+    (i32.lt_s
+     (get_local $2)
+     (get_local $4)
     )
-    (if
-     (call $~lib/map/Map<u64_u64>#has
-      (get_global $std/map/map)
-      (call $~lib/array/Array<u64>#__get
-       (get_global $std/map/keys)
-       (get_local $0)
+    (block
+     (if
+      (i64.eq
+       (i64.load offset=8
+        (i32.add
+         (get_local $0)
+         (i32.shl
+          (get_local $2)
+          (i32.const 3)
+         )
+        )
+       )
+       (get_local $1)
+      )
+      (return
+       (i32.const 1)
       )
      )
-     (block
-      (set_local $0
-       (i32.add
-        (get_local $0)
-        (i32.const 1)
+     (set_local $2
+      (i32.add
+       (get_local $2)
+       (i32.const 1)
+      )
+     )
+     (br $continue|0)
+    )
+   )
+  )
+  (i32.const 0)
+ )
+ (func $start (; 87 ;) (; has Stack IR ;) (type $v)
+  (local $0 i32)
+  (block $folding-inner0
+   (set_global $~lib/allocator/arena/startOffset
+    (i32.const 176)
+   )
+   (set_global $~lib/allocator/arena/offset
+    (get_global $~lib/allocator/arena/startOffset)
+   )
+   (call $std/map/test<i8_i32>)
+   (call $std/map/test<u8_i32>)
+   (call $std/map/test<i16_i32>)
+   (call $std/map/test<u16_i32>)
+   (call $std/map/test<i32_i32>)
+   (call $std/map/test<u32_i32>)
+   (call $std/map/test<i64_i32>)
+   (call $std/map/test<u64_i32>)
+   (call $std/map/test<f32_i32>)
+   (call $std/map/test<f64_i32>)
+   (set_global $std/map/map
+    (call $~lib/map/Map<u64_u64>#constructor
+     (i32.const 0)
+    )
+   )
+   (call $~lib/map/Map<u64_u64>#set
+    (get_global $std/map/map)
+    (i64.const 12)
+    (i64.const 12)
+   )
+   (set_global $std/map/keys
+    (call $~lib/map/Map<u64_u64>#keys
+     (get_global $std/map/map)
+    )
+   )
+   (if
+    (i32.ne
+     (i32.load offset=4
+      (get_global $std/map/keys)
+     )
+     (i32.const 1)
+    )
+    (br $folding-inner0)
+   )
+   (block $break|0
+    (loop $repeat|0
+     (br_if $break|0
+      (i32.ge_s
+       (get_local $0)
+       (i32.load offset=4
+        (get_global $std/map/keys)
        )
       )
-      (br $repeat|0)
      )
-     (block
-      (call $~lib/env/abort)
-      (unreachable)
+     (if
+      (call $~lib/map/Map<u64_u64>#has
+       (get_global $std/map/map)
+       (call $~lib/array/Array<u64>#__get
+        (get_global $std/map/keys)
+        (get_local $0)
+       )
+      )
+      (block
+       (set_local $0
+        (i32.add
+         (get_local $0)
+         (i32.const 1)
+        )
+       )
+       (br $repeat|0)
+      )
+      (br $folding-inner0)
      )
     )
    )
-  )
-  (call $~lib/map/Map<u64_u64>#set
-   (get_global $std/map/map)
-   (i64.const 12)
-   (i64.const 23)
-  )
-  (if
-   (i64.ne
-    (call $~lib/map/Map<u64_u64>#get
-     (get_global $std/map/map)
-     (i64.const 12)
-    )
+   (call $~lib/map/Map<u64_u64>#set
+    (get_global $std/map/map)
+    (i64.const 12)
     (i64.const 23)
    )
-   (block
-    (call $~lib/env/abort)
-    (unreachable)
-   )
-  )
-  (call $~lib/map/Map<u64_u64>#set
-   (get_global $std/map/map)
-   (i64.const 24)
-   (i64.const 44)
-  )
-  (set_global $std/map/keys
-   (call $~lib/map/Map<u64_u64>#keys
-    (get_global $std/map/map)
-   )
-  )
-  (if
-   (i32.ne
-    (i32.load offset=4
-     (get_global $std/map/keys)
-    )
-    (i32.const 2)
-   )
-   (block
-    (call $~lib/env/abort)
-    (unreachable)
-   )
-  )
-  (block $break|1
-   (set_local $0
-    (i32.const 0)
-   )
-   (loop $repeat|1
-    (br_if $break|1
-     (i32.ge_s
-      (get_local $0)
-      (i32.load offset=4
-       (get_global $std/map/keys)
-      )
-     )
-    )
-    (if
-     (call $~lib/map/Map<u64_u64>#has
+   (if
+    (i64.ne
+     (call $~lib/map/Map<u64_u64>#get
       (get_global $std/map/map)
-      (call $~lib/array/Array<u64>#__get
-       (get_global $std/map/keys)
-       (get_local $0)
-      )
+      (i64.const 12)
      )
-     (block
-      (set_local $0
-       (i32.add
-        (get_local $0)
-        (i32.const 1)
+     (i64.const 23)
+    )
+    (br $folding-inner0)
+   )
+   (call $~lib/map/Map<u64_u64>#set
+    (get_global $std/map/map)
+    (i64.const 24)
+    (i64.const 44)
+   )
+   (set_global $std/map/keys
+    (call $~lib/map/Map<u64_u64>#keys
+     (get_global $std/map/map)
+    )
+   )
+   (if
+    (i32.ne
+     (i32.load offset=4
+      (get_global $std/map/keys)
+     )
+     (i32.const 2)
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/array/Array<u64>#includes
+      (get_global $std/map/keys)
+      (i64.const 12)
+      (i32.const 0)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (if
+    (i32.eqz
+     (call $~lib/array/Array<u64>#includes
+      (get_global $std/map/keys)
+      (i64.const 24)
+      (i32.const 0)
+     )
+    )
+    (br $folding-inner0)
+   )
+   (block $break|1
+    (set_local $0
+     (i32.const 0)
+    )
+    (loop $repeat|1
+     (br_if $break|1
+      (i32.ge_s
+       (get_local $0)
+       (i32.load offset=4
+        (get_global $std/map/keys)
        )
       )
-      (br $repeat|1)
      )
-     (block
-      (call $~lib/env/abort)
-      (unreachable)
+     (if
+      (call $~lib/map/Map<u64_u64>#has
+       (get_global $std/map/map)
+       (call $~lib/array/Array<u64>#__get
+        (get_global $std/map/keys)
+        (get_local $0)
+       )
+      )
+      (block
+       (set_local $0
+        (i32.add
+         (get_local $0)
+         (i32.const 1)
+        )
+       )
+       (br $repeat|1)
+      )
+      (br $folding-inner0)
      )
     )
    )
+   (return)
   )
+  (call $~lib/env/abort)
+  (unreachable)
  )
 )
